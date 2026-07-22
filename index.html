@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irissh Treats — Cakes, Burgers, Juices, Falooda & Egyptian Laban in Shoranur</title>
+<meta name="description" content="Irissh Treats — Shoranur's destination for custom cakes, cake desserts, burgers, sandwiches, fresh juices, shakes, falooda & Egyptian laban. Order on WhatsApp today.">
+
+<link rel="icon" href="images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Montserrat:wght@400;500;600;700;800;900&family=Nunito:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <nav class="nav-group nav-left">
+      <a href="#about" class="nav-link">ABOUT</a>
+      <a href="#menu" class="nav-link">MENU</a>
+    </nav>
+
+    <a href="#home" class="logo-center" aria-label="Irissh Treats — Home">
+      <img src="images/irissh-logo-transparent.png" alt="Irissh Treats" class="brand-logo brand-logo-header" width="308" height="134">
+    </a>
+
+    <nav class="nav-group nav-right">
+      <a href="#custom-cake" class="nav-link">CUSTOM CAKE</a>
+      <a href="#contact" class="nav-link">CONTACT</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#home" class="mobile-link">HOME</a>
+    <a href="#about" class="mobile-link">ABOUT</a>
+    <a href="#menu" class="mobile-link">MENU</a>
+    <a href="#custom-cake" class="mobile-link">CUSTOM CAKE</a>
+    <a href="#contact" class="mobile-link">CONTACT</a>
+    <div class="mobile-socials">
+      <a href="https://www.instagram.com/irissh_treats?igsh=MWZreHpyd2cwcnFw" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+      </a>
+      <a href="https://www.facebook.com/share/1G5oWYJRoj/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://wa.me/917034535501" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.98.58 3.83 1.58 5.39L2 22l4.75-1.55A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.03.08-1.66-.1-.38-.11-.87-.27-1.5-.53-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.74 0-1.3.68-1.94.92-2.2.24-.26.53-.33.7-.33h.5c.16 0 .38-.03.58.44.22.53.75 1.83.82 1.96.07.13.11.28.02.46-.09.18-.14.3-.27.46-.13.15-.28.34-.4.46-.13.13-.27.27-.11.53.15.26.68 1.12 1.46 1.82 1 .9 1.85 1.18 2.11 1.31.26.13.41.11.56-.07.15-.18.65-.76.82-1.02.17-.26.34-.22.57-.13.24.09 1.5.71 1.76.84.26.13.43.19.5.3.06.11.06.63-.16 1.25z"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO — 3D Product Stage ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-bg-slide is-active" id="heroBgA" style="background-image:url('images/irissh-hero-bg.webp')"></div>
+    <div class="hero-bg-slide" id="heroBgB"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-glow"></div>
+  </div>
+
+  <div class="hero-content" id="heroContent">
+
+    <p class="hero-caption">Every treat tells a story</p>
+    <p class="hero-eyebrow" id="heroEyebrow" hidden>Celebration Cakes</p>
+    <h1 class="hero-title" id="heroTitle">Pure Delights, Baked with Love.</h1>
+
+    <div class="hero-carousel-stage" id="heroStage">
+      <div class="hero-plate-card plate-left" id="plateLeft">
+        <span class="plate-label" id="labelLeft">Egyptian Laban</span>
+        <div class="plate-orb">
+          <div class="plate-ring-outer"></div>
+          <img src="images/hero-round-laban.webp" alt="Egyptian laban dessert" id="imgPlateLeft" width="400" height="400">
+        </div>
+        <div class="plate-shadow" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-plate-card plate-center" id="plateCenter">
+        <span class="plate-label plate-label-active" id="labelCenter">Celebration Cake</span>
+        <div class="plate-orb plate-orb-active">
+          <div class="plate-ring-outer"></div>
+          <svg class="yellow-accent-ring" viewBox="0 0 400 400" aria-hidden="true">
+            <circle cx="200" cy="200" r="192" />
+          </svg>
+          <img src="images/irissh-cake-round.webp" alt="Custom celebration cake" id="imgPlateCenter" width="560" height="560">
+        </div>
+        <div class="plate-shadow plate-shadow-active" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-plate-card plate-right" id="plateRight">
+        <span class="plate-label" id="labelRight">Gourmet Burger</span>
+        <div class="plate-orb">
+          <div class="plate-ring-outer"></div>
+          <img src="images/irissh-burger-round.webp" alt="Gourmet burger" id="imgPlateRight" width="400" height="400">
+        </div>
+        <div class="plate-shadow" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <p class="hero-subtext" id="heroSubtext">
+      Cakes, burgers, sandwiches, juices, shakes, falooda &amp; Egyptian laban — freshly made in Shoranur.
+    </p>
+
+    <div class="hero-controls-row">
+      <button class="hero-nav-btn prev-btn" id="heroPrevBtn" aria-label="Previous dish">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+
+      <a href="https://wa.me/917034535501?text=Hi!%20I'd%20like%20to%20place%20an%20order%20at%20Irissh%20Treats." target="_blank" rel="noopener" class="btn btn-yellow-pill" id="heroCtaBtn">ORDER NOW</a>
+
+      <button class="hero-nav-btn next-btn" id="heroNextBtn" aria-label="Next dish">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="hero-corner-left">
+    <div class="slide-counter">
+      <span class="counter-num" id="currentSlideNum">01</span>
+      <span class="counter-sep">/</span>
+      <span class="counter-total" id="totalSlideNum">07</span>
+    </div>
+  </div>
+
+  <div class="hero-corner-right">
+    <a href="https://www.instagram.com/irissh_treats?igsh=MWZreHpyd2cwcnFw" target="_blank" rel="noopener" class="hero-insta-btn" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-col about-col-left">
+      <p class="eyebrow" data-animate="fade-up">About Us</p>
+      <h2 class="about-headline" data-animate="fade-up">
+        <span>Fresh Layers</span>
+        <span>Sweet Days</span>
+      </h2>
+      <div class="about-col-foot" data-animate="fade-up">
+        <h3 class="about-mini-title">Indulge in Every Bite</h3>
+        <p class="about-mini-text">Cakes, falooda, Egyptian laban &amp; drinks made fresh in Shoranur — topped with care.</p>
+      </div>
+    </div>
+
+    <div class="about-col about-col-media" data-animate="scale">
+      <div class="about-frame">
+        <img src="images/about_us_staff.webp" alt="Fresh cakes and treats at Irissh Treats" loading="lazy">
+      </div>
+    </div>
+
+    <div class="about-col about-col-right">
+      <div class="about-block" data-animate="fade-up">
+        <h3 class="about-mini-title">Crafted with Love</h3>
+        <p class="about-mini-text">From celebration cakes to creamy shakes, every treat is made with quality ingredients and a personal touch.</p>
+      </div>
+      <div class="about-block" data-animate="fade-up">
+        <h3 class="about-mini-title">Your Local Treat Spot</h3>
+        <p class="about-mini-text">Burgers, sandwiches, juices, shakes, falooda &amp; custom cakes — order fresh for any craving or occasion.</p>
+      </div>
+      <a href="#menu" class="btn btn-taste" data-animate="fade-up">
+        <span>Explore your taste</span>
+        <span class="btn-taste-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE HIGHLIGHT ============ -->
+<section class="signature" id="signature">
+  <div class="signature-head">
+    <p class="eyebrow" data-animate="fade-up">Bestsellers</p>
+    <h2 class="signature-title" data-animate="fade-up">Double the Delight</h2>
+  </div>
+
+  <div class="signature-stage" data-animate="scale">
+    <div class="signature-card signature-card-bl">
+      <h3>Celebration Cake</h3>
+      <p>Custom designs for birthdays, weddings &amp; every sweet moment.</p>
+    </div>
+
+    <div class="signature-visual">
+      <img src="images/sig-cake.webp" alt="Signature celebration cake" class="sig-img sig-img-main" loading="lazy">
+      <img src="images/sig-shake.webp" alt="Creamy shake" class="sig-img sig-img-side" loading="lazy">
+      <a href="https://wa.me/917034535501?text=Hi!%20I'd%20like%20to%20order%20from%20Irissh%20Treats." target="_blank" rel="noopener" class="sig-buy sig-buy-1">Buy Now</a>
+      <a href="https://wa.me/917034535501?text=Hi!%20I'd%20like%20to%20order%20a%20shake%20from%20Irissh%20Treats." target="_blank" rel="noopener" class="sig-buy sig-buy-2">Buy Now</a>
+    </div>
+
+    <div class="signature-card signature-card-tr">
+      <h3>Creamy Shakes</h3>
+      <p>Thick, cold &amp; topped — the perfect sip for sunny days.</p>
+    </div>
+  </div>
+
+  <div class="signature-nav" data-animate="fade-up">
+    <a href="#menu" class="signature-explore">See full menu
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============ PRODUCT SHOWCASE ============ -->
+<section class="showcase" id="menu">
+  <div class="section-head">
+    <p class="eyebrow" data-animate="fade-up">Our Menu</p>
+    <h2 class="section-title" data-animate="fade-up">A taste for every craving</h2>
+    <p class="section-sub" data-animate="fade-up">Cakes, burgers, sandwiches, juices, shakes, falooda &amp; Egyptian laban — fresh for you today.</p>
+  </div>
+
+  <div class="menu-filters" id="menuFilters" role="tablist" aria-label="Menu categories"></div>
+
+  <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="Menu highlights">
+    <div class="carousel-track" id="carouselTrack" aria-live="polite"></div>
+
+    <div class="carousel-controls">
+      <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-btn next" id="nextBtn" aria-label="Next">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <div class="carousel-info" id="carouselInfo">
+      <h3 class="product-name" id="productName"></h3>
+      <p class="product-desc" id="productDesc"></p>
+      <div class="product-meta">
+        <span class="product-price" id="productPrice"></span>
+        <a href="#" class="btn btn-primary btn-ripple btn-sm" id="orderNowBtn">Order Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CUSTOM CAKE ============ -->
+<section class="custom-cake" id="custom-cake">
+  <div class="section-head light">
+    <p class="eyebrow" data-animate="fade-up">Made Just For You</p>
+    <h2 class="section-title" data-animate="fade-up">Design your dream cake</h2>
+    <p class="section-sub" data-animate="fade-up">Five easy steps — from first sketch to sweet reality.</p>
+  </div>
+
+  <div class="timeline" id="timeline">
+    <div class="timeline-line"><div class="timeline-line-fill" id="timelineFill"></div></div>
+
+    <div class="timeline-step" data-animate="fade-up">
+      <div class="step-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div>
+      <h3>Choose Size</h3>
+      <p>From an intimate 6" to a grand 3-tier centerpiece.</p>
+    </div>
+    <div class="timeline-step" data-animate="fade-up">
+      <div class="step-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v6M12 22c4-2 7-6 7-11a7 7 0 0 0-14 0c0 5 3 9 7 11z"/></svg></div>
+      <h3>Choose Flavor</h3>
+      <p>Pick from our signature flavors or invent your own.</p>
+    </div>
+    <div class="timeline-step" data-animate="fade-up">
+      <div class="step-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21l4.5-1.5L20 8a2.1 2.1 0 0 0-3-3L5.5 16.5 4 21z"/></svg></div>
+      <h3>Choose Theme</h3>
+      <p>Tell us the occasion — we'll bring the visual story.</p>
+    </div>
+    <div class="timeline-step" data-animate="fade-up">
+      <div class="step-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"/></svg></div>
+      <h3>Upload Reference</h3>
+      <p>Share a photo or moodboard for the exact look you want.</p>
+    </div>
+    <div class="timeline-step" data-animate="fade-up">
+      <div class="step-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h3>Confirm on WhatsApp</h3>
+      <p>We'll quote, confirm, and keep you posted till pickup.</p>
+    </div>
+  </div>
+
+  <div class="custom-cake-cta" data-animate="fade-up">
+    <a href="https://wa.me/917034535501?text=Hi!%20I'd%20like%20to%20design%20a%20custom%20cake%20at%20Irissh%20Treats." target="_blank" rel="noopener" class="btn btn-primary btn-lg btn-ripple">
+      Get Instant Quote on WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="contact-card" data-animate="scale">
+    <div class="contact-info">
+      <p class="eyebrow">Visit or Message Us</p>
+      <h2 class="section-title">Order your favourite treat today</h2>
+
+      <ul class="contact-details">
+        <li>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Bypass Road, SMP Junction, Shoranur, Kerala – 679121</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span><a href="tel:+917034535501">+91 7034 535 501</a></span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span><a href="mailto:info@irisshtreats.com">info@irisshtreats.com</a></span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <span>Always Open</span>
+        </li>
+      </ul>
+
+      <div class="contact-actions">
+        <a href="https://wa.me/917034535501" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg btn-ripple">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.98.58 3.83 1.58 5.39L2 22l4.75-1.55A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.03.08-1.66-.1-.38-.11-.87-.27-1.5-.53-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.74 0-1.3.68-1.94.92-2.2.24-.26.53-.33.7-.33h.5c.16 0 .38-.03.58.44.22.53.75 1.83.82 1.96.07.13.11.28.02.46-.09.18-.14.3-.27.46-.13.15-.28.34-.4.46-.13.13-.27.27-.11.53.15.26.68 1.12 1.46 1.82 1 .9 1.85 1.18 2.11 1.31.26.13.41.11.56-.07.15-.18.65-.76.82-1.02.17-.26.34-.22.57-.13.24.09 1.5.71 1.76.84.26.13.43.19.5.3.06.11.06.63-.16 1.25z"/></svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+        <a href="https://www.instagram.com/irissh_treats?igsh=MWZreHpyd2cwcnFw" target="_blank" rel="noopener" class="btn btn-outline btn-lg btn-ripple">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          <span>Follow on Instagram</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-map">
+      <iframe title="Irissh Treats location — Shoranur, Kerala" src="https://www.google.com/maps?q=Shoranur,Kerala,679121&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="#home" class="logo-center footer-logo" aria-label="Irissh Treats — Home">
+      <img src="images/irissh-logo-transparent.png" alt="Irissh Treats" class="brand-logo brand-logo-footer" width="308" height="134" loading="lazy">
+    </a>
+
+    <nav class="footer-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#custom-cake">Custom Cake</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/irissh_treats?igsh=MWZreHpyd2cwcnFw" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+      </a>
+      <a href="https://www.facebook.com/share/1G5oWYJRoj/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://wa.me/917034535501" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.98.58 3.83 1.58 5.39L2 22l4.75-1.55A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.03.08-1.66-.1-.38-.11-.87-.27-1.5-.53-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.74 0-1.3.68-1.94.92-2.2.24-.26.53-.33.7-.33h.5c.16 0 .38-.03.58.44.22.53.75 1.83.82 1.96.07.13.11.28.02.46-.09.18-.14.3-.27.46-.13.15-.28.34-.4.46-.13.13-.27.27-.11.53.15.26.68 1.12 1.46 1.82 1 .9 1.85 1.18 2.11 1.31.26.13.41.11.56-.07.15-.18.65-.76.82-1.02.17-.26.34-.22.57-.13.24.09 1.5.71 1.76.84.26.13.43.19.5.3.06.11.06.63-.16 1.25z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Irissh Treats. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
