@@ -505,7 +505,7 @@ h4 {
 .hero {
   position: relative;
   height: 100vh;
-  min-height: 760px;
+  min-height: 780px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -560,13 +560,13 @@ h4 {
 .hero-glow {
   position: absolute;
   left: 50%;
-  top: 50%;
-  width: min(720px, 88vw);
-  height: min(420px, 52vh);
+  top: 48%;
+  width: min(720px, 90vw);
+  height: min(420px, 55vh);
   transform: translate(-50%, -50%);
-  background: radial-gradient(ellipse at center, rgba(155, 79, 188, 0.38) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(155, 79, 188, 0.35) 0%, transparent 70%);
   pointer-events: none;
-  filter: blur(22px);
+  filter: blur(20px);
   animation: heroGlowPulse 5s ease-in-out infinite;
 }
 
@@ -580,9 +580,9 @@ h4 {
   z-index: 10;
   text-align: center;
   color: #FFFFFF;
-  max-width: 1240px;
+  max-width: 1100px;
   width: 100%;
-  padding: 88px clamp(16px, 4vw, 40px) 40px;
+  padding: 96px clamp(16px, 4vw, 40px) 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -626,7 +626,7 @@ h4 {
   color: #FFFFFF;
   line-height: 1.12;
   letter-spacing: 0.02em;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
   text-shadow: 0 4px 28px rgba(139, 66, 173, 0.45);
   opacity: 0;
   transform: translateY(20px);
@@ -636,10 +636,10 @@ h4 {
 .hero-carousel-stage {
   position: relative;
   width: 100%;
-  max-width: 1000px;
-  height: clamp(260px, 32vw, 360px);
-  margin: 0 auto 14px;
-  padding: 0 clamp(8px, 2vw, 20px);
+  max-width: 900px;
+  height: clamp(230px, 32vw, 320px);
+  margin: 0 auto 16px;
+  padding: 0 clamp(12px, 3vw, 28px);
   opacity: 0;
   transform: scale(0.94);
   animation: heroStageIn 1s var(--ease) 0.35s forwards;
@@ -770,14 +770,14 @@ h4 {
 
 .plate-center {
   left: 50%;
-  width: clamp(200px, 22vw, 290px);
+  width: clamp(160px, 20vw, 230px);
   z-index: 5;
   transform: translateX(-50%);
 }
 
 .plate-center .plate-orb {
-  width: clamp(200px, 22vw, 290px);
-  height: clamp(200px, 22vw, 290px);
+  width: clamp(160px, 20vw, 230px);
+  height: clamp(160px, 20vw, 230px);
 }
 
 .plate-center:hover .plate-orb img {
@@ -821,7 +821,7 @@ h4 {
 
 .plate-left,
 .plate-right {
-  width: clamp(110px, 12vw, 155px);
+  width: clamp(90px, 11vw, 130px);
   opacity: 0.78;
   filter: brightness(0.9) saturate(0.92);
   z-index: 2;
@@ -829,19 +829,19 @@ h4 {
 
 .plate-left .plate-orb,
 .plate-right .plate-orb {
-  width: clamp(110px, 12vw, 155px);
-  height: clamp(110px, 12vw, 155px);
+  width: clamp(90px, 11vw, 130px);
+  height: clamp(90px, 11vw, 130px);
   flex-shrink: 0;
 }
 
 .plate-left {
-  left: clamp(2%, 5vw, 9%);
-  transform: perspective(900px) rotateY(12deg) translateY(22px) scale(0.92);
+  left: clamp(4%, 8vw, 12%);
+  transform: perspective(900px) rotateY(12deg) translateY(22px) scale(0.9);
 }
 
 .plate-right {
-  right: clamp(2%, 5vw, 9%);
-  transform: perspective(900px) rotateY(-12deg) translateY(22px) scale(0.92);
+  right: clamp(4%, 8vw, 12%);
+  transform: perspective(900px) rotateY(-12deg) translateY(22px) scale(0.9);
 }
 
 .plate-left:hover,
@@ -851,11 +851,11 @@ h4 {
 }
 
 .plate-left:hover {
-  transform: perspective(900px) rotateY(8deg) translateY(16px) scale(0.98);
+  transform: perspective(900px) rotateY(8deg) translateY(12px) scale(0.96);
 }
 
 .plate-right:hover {
-  transform: perspective(900px) rotateY(-8deg) translateY(16px) scale(0.98);
+  transform: perspective(900px) rotateY(-8deg) translateY(12px) scale(0.96);
 }
 
 .plate-left .plate-orb img,
@@ -2093,67 +2093,45 @@ h4 {
 .about-col-right [data-animate]:nth-child(2) { transition-delay: 0.24s; }
 .about-col-right [data-animate]:nth-child(3) { transition-delay: 0.36s; }
 
-/* Fluid hero product scale by screen size */
-@media (min-width: 1280px) {
-  .hero-carousel-stage {
-    height: clamp(320px, 30vw, 400px);
-    max-width: 1080px;
-  }
-
-  .plate-center {
-    width: clamp(260px, 22vw, 330px);
-  }
-
-  .plate-center .plate-orb {
-    width: clamp(260px, 22vw, 330px);
-    height: clamp(260px, 22vw, 330px);
-  }
-
-  .plate-left,
-  .plate-right {
-    width: clamp(140px, 11vw, 175px);
-  }
-
-  .plate-left .plate-orb,
-  .plate-right .plate-orb {
-    width: clamp(140px, 11vw, 175px);
-    height: clamp(140px, 11vw, 175px);
-  }
-}
-
+/* Large desktop — bigger hero products (laptop keeps original size) */
 @media (min-width: 1440px) {
   .hero {
-    min-height: 820px;
+    min-height: 840px;
+  }
+
+  .hero-content {
+    max-width: 1240px;
   }
 
   .hero-glow {
-    width: min(820px, 90vw);
-    height: min(480px, 56vh);
+    top: 50%;
+    width: min(860px, 90vw);
+    height: min(500px, 58vh);
   }
 
   .hero-carousel-stage {
-    height: 460px;
-    max-width: 1180px;
+    height: 480px;
+    max-width: 1200px;
   }
 
   .plate-center {
-    width: clamp(320px, 24vw, 380px);
+    width: 380px;
   }
 
   .plate-center .plate-orb {
-    width: clamp(320px, 24vw, 380px);
-    height: clamp(320px, 24vw, 380px);
+    width: 380px;
+    height: 380px;
   }
 
   .plate-left,
   .plate-right {
-    width: clamp(170px, 12vw, 200px);
+    width: 200px;
   }
 
   .plate-left .plate-orb,
   .plate-right .plate-orb {
-    width: clamp(170px, 12vw, 200px);
-    height: clamp(170px, 12vw, 200px);
+    width: 200px;
+    height: 200px;
   }
 
   .plate-left {
@@ -2167,32 +2145,32 @@ h4 {
 
 @media (min-width: 1680px) {
   .hero {
-    min-height: 860px;
+    min-height: 900px;
   }
 
   .hero-carousel-stage {
-    height: 520px;
-    max-width: 1240px;
+    height: 540px;
+    max-width: 1280px;
   }
 
   .plate-center {
-    width: 420px;
+    width: 440px;
   }
 
   .plate-center .plate-orb {
-    width: 420px;
-    height: 420px;
+    width: 440px;
+    height: 440px;
   }
 
   .plate-left,
   .plate-right {
-    width: 220px;
+    width: 230px;
   }
 
   .plate-left .plate-orb,
   .plate-right .plate-orb {
-    width: 220px;
-    height: 220px;
+    width: 230px;
+    height: 230px;
   }
 
   .plate-left {
@@ -2215,30 +2193,6 @@ h4 {
   .about-grid {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
-  }
-
-  .hero-carousel-stage {
-    height: clamp(250px, 34vw, 320px);
-  }
-
-  .plate-center {
-    width: clamp(190px, 24vw, 250px);
-  }
-
-  .plate-center .plate-orb {
-    width: clamp(190px, 24vw, 250px);
-    height: clamp(190px, 24vw, 250px);
-  }
-
-  .plate-left,
-  .plate-right {
-    width: clamp(100px, 12vw, 135px);
-  }
-
-  .plate-left .plate-orb,
-  .plate-right .plate-orb {
-    width: clamp(100px, 12vw, 135px);
-    height: clamp(100px, 12vw, 135px);
   }
 
   .about-col-left {
