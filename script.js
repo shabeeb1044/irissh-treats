@@ -6,6 +6,37 @@
 document.documentElement.classList.add('js-ready');
 
 /* ---------------------------------------------------------
+   0. PAGE LOAD REVEAL
+--------------------------------------------------------- */
+(function initPageReveal() {
+  const root = document.documentElement;
+  const reveal = document.getElementById('pageReveal');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let done = false;
+
+  function finishReveal() {
+    if (done) return;
+    done = true;
+    root.classList.add('is-loaded');
+    if (!reveal) return;
+    if (prefersReducedMotion) {
+      reveal.classList.add('is-done');
+      return;
+    }
+    requestAnimationFrame(() => {
+      reveal.classList.add('is-done');
+    });
+  }
+
+  if (document.readyState === 'complete') {
+    finishReveal();
+  } else {
+    window.addEventListener('load', finishReveal, { once: true });
+    setTimeout(finishReveal, 2200);
+  }
+})();
+
+/* ---------------------------------------------------------
    WhatsApp helpers
 --------------------------------------------------------- */
 const WHATSAPP_NUMBER = '917034535501';
