@@ -147,24 +147,6 @@ const heroProducts = [
     orderMessage: "Hi! I'd like to order fresh fruit juice from Irissh Treats."
   },
   {
-    name: 'Creamy Shake',
-    eyebrow: 'Shakes & Sips',
-    tagline: 'Thick. Creamy. Irresistible.',
-    blurb: 'Handcrafted shakes topped with whipped cream — the sweetest cool-down treat.',
-    img: 'images/hero-round-shake.webp',
-    bg: 'images/hero-bg-new.webp',
-    orderMessage: "Hi! I'd like to order a creamy shake from Irissh Treats."
-  },
-  {
-    name: 'Rose Falooda',
-    eyebrow: 'Dessert Drinks',
-    tagline: 'Layers of Pure Indulgence.',
-    blurb: 'Classic rose falooda with vermicelli, jelly & ice cream — a dessert in a glass.',
-    img: 'images/hero-round-falooda.webp',
-    bg: 'images/hero-bg.webp',
-    orderMessage: "Hi! I'd like to order rose falooda from Irissh Treats."
-  },
-  {
     name: 'Gourmet Sandwich',
     eyebrow: 'Fresh Sandwiches',
     tagline: 'Crisp. Loaded. Delicious.',
@@ -181,6 +163,78 @@ const heroProducts = [
     img: 'images/hero-round-laban.webp',
     bg: 'images/irissh-hero-bg.webp',
     orderMessage: "Hi! I'd like to order Egyptian laban dessert from Irissh Treats."
+  },
+  {
+    name: 'Bambooza',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Vanilla. Caramel. Crunch.',
+    blurb: 'Creamy vanilla ice cream with caramel drizzle, biscuit crunch & golden crispy toppings.',
+    img: 'images/hero-round-bambooza.jpg',
+    bg: 'images/irissh-hero-bg.webp',
+    orderMessage: "Hi! I'd like to order Bambooza from Irissh Treats."
+  },
+  {
+    name: 'Loua',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Kunafa. Cream. Fresh Berry.',
+    blurb: 'Rich creamy dessert topped with crispy kunafa, toasted almonds, chocolate & a fresh strawberry.',
+    img: 'images/hero-round-loua.jpg',
+    bg: 'images/hero-bg.webp',
+    orderMessage: "Hi! I'd like to order Loua from Irissh Treats."
+  },
+  {
+    name: 'Salankatia',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Chocolate Meets Pistachio.',
+    blurb: 'Smooth chocolate on one side, vibrant pistachio cream on the other — finished with crushed nuts & sesame.',
+    img: 'images/hero-round-salankatia.jpg',
+    bg: 'images/hero-bg-new.webp',
+    orderMessage: "Hi! I'd like to order Salankatia from Irissh Treats."
+  },
+  {
+    name: 'Ruh Hayathi',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Luxurious. Layered. Unforgettable.',
+    blurb: 'Glossy chocolate & pistachio drizzle with crunchy nuts, flakes, sprinkles & a bright cherry on top.',
+    img: 'images/hero-round-ruh-hayathi.jpg',
+    bg: 'images/irissh-hero-bg.webp',
+    orderMessage: "Hi! I'd like to order Ruh Hayathi from Irissh Treats."
+  },
+  {
+    name: 'Ashta Dream',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Cream. Pistachio. Rose.',
+    blurb: 'Thick ashta cream with crushed pistachios, rose petals, honey drizzle & golden pastry flakes.',
+    img: 'images/hero-round-ashta-dream.jpg',
+    bg: 'images/hero-bg.webp',
+    orderMessage: "Hi! I'd like to order Ashta Dream from Irissh Treats."
+  },
+  {
+    name: 'Om Ali',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Warm. Nutty. Comforting.',
+    blurb: 'Creamy pastry layers with toasted nuts, raisins & coconut — a classic Egyptian favourite.',
+    img: 'images/hero-round-om-ali.jpg',
+    bg: 'images/hero-bg-new.webp',
+    orderMessage: "Hi! I'd like to order Om Ali from Irissh Treats."
+  },
+  {
+    name: 'Lotus Crunch',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Caramel. Biscuit. Bliss.',
+    blurb: 'Silky lotus biscuit cream with caramelised crunch, whipped cream & chocolate chips.',
+    img: 'images/hero-round-lotus-crunch.jpg',
+    bg: 'images/irissh-hero-bg.webp',
+    orderMessage: "Hi! I'd like to order Lotus Crunch from Irissh Treats."
+  },
+  {
+    name: 'Kunafa Royale',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Crispy. Creamy. Royal.',
+    blurb: 'Golden crispy kunafa with creamy filling, pistachio dust, syrup glaze & toasted almonds.',
+    img: 'images/hero-round-kunafa-royale.jpg',
+    bg: 'images/hero_bakery_bg.webp',
+    orderMessage: "Hi! I'd like to order Kunafa Royale from Irissh Treats."
   }
 ];
 
@@ -563,25 +617,67 @@ const products = [
     orderMessage: "Hi! I'd like to order fresh juices from Irissh Treats."
   },
   {
-    name: 'Creamy Shakes',
-    category: 'drinks',
-    desc: 'Thick, creamy shakes topped with whipped cream — the sweetest cool-down treat.',
-    img: 'images/menu-shake.webp',
-    orderMessage: "Hi! I'd like to order a shake from Irissh Treats."
-  },
-  {
-    name: 'Rose Falooda',
-    category: 'desserts',
-    desc: 'Classic rose falooda with vermicelli, jelly & ice cream — a dessert in a glass.',
-    img: 'images/menu-falooda.webp',
-    orderMessage: "Hi! I'd like to order rose falooda from Irissh Treats."
-  },
-  {
     name: 'Egyptian Laban',
     category: 'desserts',
     desc: 'Silky Egyptian laban dessert — cool milk pudding topped with pistachio, rose & honey.',
     img: 'images/menu-laban.webp',
     orderMessage: "Hi! I'd like to order Egyptian laban dessert from Irissh Treats."
+  },
+  {
+    name: 'Bambooza',
+    category: 'desserts',
+    desc: 'Creamy vanilla ice cream with caramel drizzle, crunchy biscuit pieces, chocolate flakes & golden toppings.',
+    img: 'images/menu-bambooza.jpg',
+    orderMessage: "Hi! I'd like to order Bambooza from Irissh Treats."
+  },
+  {
+    name: 'Loua',
+    category: 'desserts',
+    desc: 'Rich creamy dessert topped with crispy kunafa, toasted almond flakes, chocolate pieces & a fresh strawberry.',
+    img: 'images/menu-loua.jpg',
+    orderMessage: "Hi! I'd like to order Loua from Irissh Treats."
+  },
+  {
+    name: 'Salankatia',
+    category: 'desserts',
+    desc: 'Smooth chocolate cream meets vibrant pistachio — topped with crushed pistachios & sesame seeds.',
+    img: 'images/menu-salankatia.jpg',
+    orderMessage: "Hi! I'd like to order Salankatia from Irissh Treats."
+  },
+  {
+    name: 'Ruh Hayathi',
+    category: 'desserts',
+    desc: 'Glossy chocolate sauce, pistachio drizzle, crunchy nuts, chocolate flakes, white sprinkles & a cherry on top.',
+    img: 'images/menu-ruh-hayathi.jpg',
+    orderMessage: "Hi! I'd like to order Ruh Hayathi from Irissh Treats."
+  },
+  {
+    name: 'Ashta Dream',
+    category: 'desserts',
+    desc: 'Thick ashta cream with crushed pistachios, rose petals, honey drizzle & golden pastry flakes.',
+    img: 'images/menu-ashta-dream.jpg',
+    orderMessage: "Hi! I'd like to order Ashta Dream from Irissh Treats."
+  },
+  {
+    name: 'Om Ali',
+    category: 'desserts',
+    desc: 'Creamy pastry layers with toasted nuts, raisins & coconut — a classic Egyptian favourite.',
+    img: 'images/menu-om-ali.jpg',
+    orderMessage: "Hi! I'd like to order Om Ali from Irissh Treats."
+  },
+  {
+    name: 'Lotus Crunch',
+    category: 'desserts',
+    desc: 'Silky lotus biscuit cream with caramelised crunch, whipped cream & chocolate chips.',
+    img: 'images/menu-lotus-crunch.jpg',
+    orderMessage: "Hi! I'd like to order Lotus Crunch from Irissh Treats."
+  },
+  {
+    name: 'Kunafa Royale',
+    category: 'desserts',
+    desc: 'Golden crispy kunafa with creamy filling, pistachio dust, syrup glaze & toasted almonds.',
+    img: 'images/menu-kunafa-royale.jpg',
+    orderMessage: "Hi! I'd like to order Kunafa Royale from Irissh Treats."
   }
 ];
 
