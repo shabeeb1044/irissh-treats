@@ -1234,7 +1234,6 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(10px, 1.4vw, 20px);
   min-height: 340px;
   position: relative;
   padding: 12px 0 8px;
@@ -1248,6 +1247,9 @@ h4 {
   height: 118px;
   aspect-ratio: 1;
   flex-shrink: 0;
+  /* Spacing lives on the items (not track gap) so hidden zero-width
+     items don't add phantom space that pushes the active item off-center */
+  margin: 0 clamp(5px, 0.7vw, 10px);
   cursor: pointer;
   border: 2px solid rgba(155, 79, 188, 0.28);
   padding: 0;
@@ -2031,6 +2033,39 @@ h4 {
   filter: grayscale(10%) hue-rotate(280deg);
 }
 
+.map-directions-link {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background: var(--primary);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+  transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+.map-directions-link:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .22);
+}
+
+.map-directions-link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */
@@ -2577,7 +2612,6 @@ h4 {
 
   .carousel-track {
     min-height: 260px;
-    gap: 0;
     overflow: hidden;
     padding: 12px 0 8px;
     justify-content: center;

@@ -129,6 +129,51 @@ const heroProducts = [
     orderMessage: "Hi! I'd like to order a celebration cake from Irissh Treats."
   },
   {
+    name: 'Birthday Bloom Cake',
+    eyebrow: 'Custom Cakes',
+    tagline: 'Make Their Day Extra Sweet.',
+    blurb: 'Pink ombre birthday cake with chocolate drips, fresh berries & a Happy Birthday plaque.',
+    img: 'images/hero-round-cake-birthday.jpg',
+    bg: 'images/irissh-hero-bg.webp',
+    orderMessage: "Hi! I'd like to order a Birthday Bloom cake from Irissh Treats."
+  },
+  {
+    name: 'Chocolate Gold Cake',
+    eyebrow: 'Custom Cakes',
+    tagline: 'Rich. Elegant. Irresistible.',
+    blurb: 'Dark chocolate ganache cake finished with berries, gold leaf & toasted hazelnuts.',
+    img: 'images/hero-round-cake-chocolate-gold.jpg',
+    bg: 'images/hero-bg.webp',
+    orderMessage: "Hi! I'd like to order a Chocolate Gold cake from Irissh Treats."
+  },
+  {
+    name: 'Red Velvet Rose',
+    eyebrow: 'Custom Cakes',
+    tagline: 'Classic. Romantic. Unforgettable.',
+    blurb: 'Velvety red layers with cream cheese frosting, fresh roses & raspberry accents.',
+    img: 'images/hero-round-cake-red-velvet.jpg',
+    bg: 'images/hero-bg-new.webp',
+    orderMessage: "Hi! I'd like to order a Red Velvet Rose cake from Irissh Treats."
+  },
+  {
+    name: 'Floral Wedding Cake',
+    eyebrow: 'Custom Cakes',
+    tagline: 'Ivory Elegance for Your Day.',
+    blurb: 'Smooth ivory buttercream with cascading white roses — crafted for weddings & celebrations.',
+    img: 'images/hero-round-cake-floral-wedding.jpg',
+    bg: 'images/irissh-hero-bg.webp',
+    orderMessage: "Hi! I'd like to order a Floral Wedding cake from Irissh Treats."
+  },
+  {
+    name: 'Butterscotch Crunch Cake',
+    eyebrow: 'Custom Cakes',
+    tagline: 'Caramel. Crunch. Comfort.',
+    blurb: 'Golden butterscotch cake with caramel drips, toffee bits & whipped cream peaks.',
+    img: 'images/hero-round-cake-butterscotch.jpg',
+    bg: 'images/hero_bakery_bg.webp',
+    orderMessage: "Hi! I'd like to order a Butterscotch Crunch cake from Irissh Treats."
+  },
+  {
     name: 'Gourmet Burger',
     eyebrow: 'Savory Bites',
     tagline: 'Fresh. Stacked. Satisfying.',
@@ -235,6 +280,42 @@ const heroProducts = [
     img: 'images/hero-round-kunafa-royale.jpg',
     bg: 'images/hero_bakery_bg.webp',
     orderMessage: "Hi! I'd like to order Kunafa Royale from Irissh Treats."
+  },
+  {
+    name: 'Mango Cheesecake',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Tropical. Creamy. Fresh.',
+    blurb: 'Creamy mango cheesecake cup with mango puree, fresh mango cubes & biscuit crunch.',
+    img: 'images/hero-round-mango-cheesecake.jpg',
+    bg: 'images/irissh-hero-bg.webp',
+    orderMessage: "Hi! I'd like to order Mango Cheesecake from Irissh Treats."
+  },
+  {
+    name: 'Chocolate Mousse',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Dark. Silky. Indulgent.',
+    blurb: 'Silky chocolate mousse cup with glossy chocolate sauce, shavings & a fresh raspberry.',
+    img: 'images/hero-round-chocolate-mousse.jpg',
+    bg: 'images/hero-bg.webp',
+    orderMessage: "Hi! I'd like to order Chocolate Mousse from Irissh Treats."
+  },
+  {
+    name: 'Strawberry Cheesecake',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Berry. Cream. Bliss.',
+    blurb: 'Strawberry cheesecake cup with pink berry sauce, fresh strawberries & biscuit crumble.',
+    img: 'images/hero-round-strawberry-cheesecake.jpg',
+    bg: 'images/hero-bg-new.webp',
+    orderMessage: "Hi! I'd like to order Strawberry Cheesecake from Irissh Treats."
+  },
+  {
+    name: 'Pistachio Paradise',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Nutty. Creamy. Dreamy.',
+    blurb: 'Vibrant pistachio cream cup with crushed pistachios, soft cream & a touch of honey.',
+    img: 'images/hero-round-pistachio-paradise.jpg',
+    bg: 'images/hero_bakery_bg.webp',
+    orderMessage: "Hi! I'd like to order Pistachio Paradise from Irissh Treats."
   }
 ];
 
@@ -596,15 +677,50 @@ const products = [
     orderMessage: "Hi! I'd like to order cakes from Irissh Treats."
   },
   {
+    name: 'Birthday Bloom Cake',
+    category: 'cakes',
+    desc: 'Pink ombre birthday cake with chocolate drips, fresh berries & a Happy Birthday plaque.',
+    img: 'images/menu-cake-birthday.jpg',
+    orderMessage: "Hi! I'd like to order a Birthday Bloom cake from Irissh Treats."
+  },
+  {
+    name: 'Chocolate Gold Cake',
+    category: 'cakes',
+    desc: 'Dark chocolate ganache cake finished with berries, edible gold leaf & toasted hazelnuts.',
+    img: 'images/menu-cake-chocolate-gold.jpg',
+    orderMessage: "Hi! I'd like to order a Chocolate Gold cake from Irissh Treats."
+  },
+  {
+    name: 'Red Velvet Rose',
+    category: 'cakes',
+    desc: 'Classic red velvet with cream cheese frosting, fresh roses & raspberry accents.',
+    img: 'images/menu-cake-red-velvet.jpg',
+    orderMessage: "Hi! I'd like to order a Red Velvet Rose cake from Irissh Treats."
+  },
+  {
+    name: 'Floral Wedding Cake',
+    category: 'cakes',
+    desc: 'Ivory buttercream elegance with cascading white roses — perfect for weddings & celebrations.',
+    img: 'images/menu-cake-floral-wedding.jpg',
+    orderMessage: "Hi! I'd like to order a Floral Wedding cake from Irissh Treats."
+  },
+  {
+    name: 'Butterscotch Crunch Cake',
+    category: 'cakes',
+    desc: 'Golden butterscotch cake with caramel drips, toffee bits & whipped cream peaks.',
+    img: 'images/menu-cake-butterscotch.jpg',
+    orderMessage: "Hi! I'd like to order a Butterscotch Crunch cake from Irissh Treats."
+  },
+  {
     name: 'Gourmet Burgers',
-    category: 'burgers',
+    category: 'burgers-sandwiches',
     desc: 'Juicy, freshly made burgers stacked high — perfect for lunch or a satisfying snack.',
     img: 'images/menu-burger.webp',
     orderMessage: "Hi! I'd like to order burgers from Irissh Treats."
   },
   {
     name: 'Fresh Sandwiches',
-    category: 'sandwiches',
+    category: 'burgers-sandwiches',
     desc: 'Crisp, loaded sandwiches made fresh — grab one on the go or settle in for a bite.',
     img: 'images/menu-sandwich.webp',
     orderMessage: "Hi! I'd like to order sandwiches from Irissh Treats."
@@ -678,14 +794,41 @@ const products = [
     desc: 'Golden crispy kunafa with creamy filling, pistachio dust, syrup glaze & toasted almonds.',
     img: 'images/menu-kunafa-royale.jpg',
     orderMessage: "Hi! I'd like to order Kunafa Royale from Irissh Treats."
+  },
+  {
+    name: 'Mango Cheesecake',
+    category: 'desserts',
+    desc: 'Creamy mango cheesecake cup with mango puree, fresh mango cubes & biscuit crunch.',
+    img: 'images/menu-mango-cheesecake.jpg',
+    orderMessage: "Hi! I'd like to order Mango Cheesecake from Irissh Treats."
+  },
+  {
+    name: 'Chocolate Mousse',
+    category: 'desserts',
+    desc: 'Silky chocolate mousse cup with glossy chocolate sauce, shavings & a fresh raspberry.',
+    img: 'images/menu-chocolate-mousse.jpg',
+    orderMessage: "Hi! I'd like to order Chocolate Mousse from Irissh Treats."
+  },
+  {
+    name: 'Strawberry Cheesecake',
+    category: 'desserts',
+    desc: 'Strawberry cheesecake cup with pink berry sauce, fresh strawberries & biscuit crumble.',
+    img: 'images/menu-strawberry-cheesecake.jpg',
+    orderMessage: "Hi! I'd like to order Strawberry Cheesecake from Irissh Treats."
+  },
+  {
+    name: 'Pistachio Paradise',
+    category: 'desserts',
+    desc: 'Vibrant pistachio cream cup with crushed pistachios, soft cream & a touch of honey.',
+    img: 'images/menu-pistachio-paradise.jpg',
+    orderMessage: "Hi! I'd like to order Pistachio Paradise from Irissh Treats."
   }
 ];
 
 const menuCategories = [
   { id: 'all', label: 'All' },
   { id: 'cakes', label: 'Cakes' },
-  { id: 'burgers', label: 'Burgers' },
-  { id: 'sandwiches', label: 'Sandwiches' },
+  { id: 'burgers-sandwiches', label: 'Burgers & Sandwiches' },
   { id: 'drinks', label: 'Drinks' },
   { id: 'desserts', label: 'Desserts' }
 ];
@@ -788,7 +931,11 @@ function renderCarouselPositions() {
   items.forEach((item, i) => {
     item.classList.remove('active', 'side-1', 'side-2', 'before', 'after', 'is-hidden');
     const diff = relativeDiff(i, len);
-    const abs = Math.abs(diff);
+    let abs = Math.abs(diff);
+
+    // With an even item count the wrap-around item (diff === len/2) has no
+    // mirror on the other side; hide it so the active item stays centered.
+    if (len % 2 === 0 && abs === len / 2) abs = Infinity;
 
     if (diff === 0) {
       item.classList.add('active');
