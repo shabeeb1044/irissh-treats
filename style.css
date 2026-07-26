@@ -44,6 +44,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 72px;
+  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 body {
@@ -52,6 +55,8 @@ body {
   color: #2A1F33;
   background: var(--bg-light);
   overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -462,8 +467,10 @@ h4 {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
+  height: 100dvh;
   width: min(78vw, 340px);
+  max-width: 100%;
   background: rgba(15, 7, 22, 0.97);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -473,12 +480,16 @@ h4 {
   gap: 4px;
   padding: 40px;
   transform: translateX(100%);
-  transition: transform .5s var(--ease);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform .5s var(--ease), visibility .5s var(--ease);
   z-index: 940;
 }
 
 .mobile-menu.open {
   transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .mobile-link {
@@ -547,7 +558,7 @@ h4 {
 
 .hero-bg-slide {
   position: absolute;
-  inset: -3%;
+  inset: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1155,6 +1166,8 @@ h4 {
   padding: var(--section-pad) 0;
   background: var(--bg-light);
   position: relative;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 .showcase::before {
@@ -1378,11 +1391,15 @@ h4 {
   justify-content: center;
   gap: 22px;
   margin-top: 34px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .carousel-btn {
   width: 48px;
   height: 48px;
+  flex-shrink: 0;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -1402,11 +1419,23 @@ h4 {
 .carousel-dots {
   display: flex;
   gap: 8px;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: min(420px, 100%);
+  overflow-x: auto;
+  justify-content: safe center;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-dots::-webkit-scrollbar {
+  display: none;
 }
 
 .dot {
   width: 8px;
   height: 8px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: rgba(139, 66, 173, .18);
   cursor: pointer;
@@ -1928,6 +1957,13 @@ h4 {
   gap: 14px;
   color: #6B6080;
   font-size: .85rem;
+  min-width: 0;
+}
+
+.contact-details li span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-details a {
@@ -2265,6 +2301,8 @@ h4 {
 
   .brand-logo-header {
     height: 64px;
+    max-width: min(148px, 42vw);
+    width: auto;
   }
 
   .navbar.scrolled .brand-logo-header {
@@ -2281,10 +2319,25 @@ h4 {
 
   .hamburger {
     display: flex;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 960;
+  }
+
+  .nav-inner {
+    padding: 0 16px;
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .logo-center {
+    min-width: 0;
   }
 
   .feature-banner {
     margin-top: -12px;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .feature-banner-bar {
@@ -2515,6 +2568,9 @@ h4 {
     gap: 22px;
     margin-bottom: 20px;
     padding: 0 16px 4px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .menu-filter-tab {
@@ -2522,8 +2578,11 @@ h4 {
   }
 
   .carousel {
-    padding: 0;
-    max-width: none;
+    padding: 0 16px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .carousel-track {
@@ -2531,6 +2590,8 @@ h4 {
     overflow: hidden;
     padding: 12px 0 8px;
     justify-content: center;
+    width: 100%;
+    max-width: 100%;
   }
 
   .carousel-item {
@@ -2573,14 +2634,21 @@ h4 {
 
   .carousel-controls {
     margin-top: 22px;
-    gap: 18px;
-    padding: 0 20px;
+    gap: 14px;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   .carousel-btn {
     width: 44px;
     height: 44px;
     box-shadow: 0 8px 22px -8px rgba(139, 66, 173, 0.28);
+  }
+
+  /* Many menu items make dots wider than the phone — keep arrows visible */
+  .carousel-dots {
+    display: none;
   }
 
   /* Product name lives under the carousel — hide on-image label */
@@ -2591,9 +2659,11 @@ h4 {
   .carousel-info {
     margin-top: 24px;
     min-height: 110px;
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 0;
+    margin-right: 0;
     padding: 22px 18px 24px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -2609,6 +2679,7 @@ h4 {
 
   .brand-logo-header {
     height: 58px;
+    max-width: min(136px, 40vw);
   }
 
   .navbar.scrolled .brand-logo-header {
