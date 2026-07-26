@@ -40,6 +40,7 @@ document.documentElement.classList.add('js-ready');
    WhatsApp helpers
 --------------------------------------------------------- */
 const WHATSAPP_NUMBER = '917034535501';
+const ORDER_MESSAGE = "Hi! I'd like to place an order at Irissh Treats.";
 
 function whatsappLink(message) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -183,13 +184,31 @@ const heroProducts = [
     orderMessage: "Hi! I'd like to order a gourmet burger from Irissh Treats."
   },
   {
-    name: 'Fresh Fruit Juice',
+    name: 'Tropical Fruit Juice',
     eyebrow: 'Chilled Juices',
     tagline: 'Squeezed Fresh. Served Cold.',
-    blurb: 'Vibrant fruit juices pressed fresh — a cool sip of sunshine in every glass.',
-    img: 'images/irissh-juice-round.webp',
+    blurb: 'Bright mango & kiwi juice packed with ice and fresh fruit — a cool sip of sunshine.',
+    img: 'images/hero-round-tropical-juice.jpg',
     bg: 'images/hero_bg_restaurant.webp',
-    orderMessage: "Hi! I'd like to order fresh fruit juice from Irissh Treats."
+    orderMessage: "Hi! I'd like to order Tropical Fruit Juice from Irissh Treats."
+  },
+  {
+    name: 'Mixed Berry Juice',
+    eyebrow: 'Chilled Juices',
+    tagline: 'Berry Bold. Ice Cold.',
+    blurb: 'A vibrant blend of berries pressed fresh — rich, fruity, and perfectly chilled.',
+    img: 'images/irissh-juice-round.webp',
+    bg: 'images/hero-bg-new.webp',
+    orderMessage: "Hi! I'd like to order Mixed Berry Juice from Irissh Treats."
+  },
+  {
+    name: 'Signature Berry Juice',
+    eyebrow: 'Chilled Juices',
+    tagline: 'Bottled Fresh. Pure Flavour.',
+    blurb: 'Our signature cold-pressed berry juice — bold colour, natural sweetness, ready to sip.',
+    img: 'images/hero-round-berry-juice.jpg',
+    bg: 'images/hero_bg_restaurant.webp',
+    orderMessage: "Hi! I'd like to order Signature Berry Juice from Irissh Treats."
   },
   {
     name: 'Gourmet Sandwich',
@@ -442,7 +461,7 @@ function applyHeroContent(center, left, right, total) {
   if (heroEyebrow) heroEyebrow.textContent = center.eyebrow;
   if (heroTitle) heroTitle.textContent = center.tagline;
   if (heroSubtext) heroSubtext.textContent = center.blurb;
-  if (heroCtaBtn) heroCtaBtn.href = whatsappLink(center.orderMessage);
+  if (heroCtaBtn) heroCtaBtn.href = whatsappLink(ORDER_MESSAGE);
 
   const accentRing = document.querySelector('.yellow-accent-ring circle');
   if (accentRing) {
@@ -627,43 +646,20 @@ resetHeroAutoplay();
 });
 
 /* ---------------------------------------------------------
-   5. INTERSECTION OBSERVER — Scroll reveals + Timeline
+   5. INTERSECTION OBSERVER — Scroll reveals
 --------------------------------------------------------- */
 const revealTargets = document.querySelectorAll('[data-animate]');
-const timelineFill = document.getElementById('timelineFill');
-const timelineSection = document.getElementById('timeline');
-
-let timelineAnimated = false;
 
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('in-view');
-
-      if (entry.target.closest('#timeline') && timelineFill && !timelineAnimated) {
-        timelineAnimated = true;
-        timelineFill.style.width = '100%';
-      }
-
       revealObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
 revealTargets.forEach(el => revealObserver.observe(el));
-
-if (timelineSection) {
-  const timelineObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && timelineFill && !timelineAnimated) {
-        timelineAnimated = true;
-        timelineFill.style.width = '100%';
-        timelineObserver.disconnect();
-      }
-    });
-  }, { threshold: 0.3 });
-  timelineObserver.observe(timelineSection);
-}
 
 /* ---------------------------------------------------------
    6. PRODUCT CAROUSEL — Menu Highlights
@@ -726,11 +722,25 @@ const products = [
     orderMessage: "Hi! I'd like to order sandwiches from Irissh Treats."
   },
   {
-    name: 'Fresh Fruit Juices',
+    name: 'Tropical Fruit Juice',
     category: 'drinks',
-    desc: 'Chilled, natural fruit juices pressed fresh — a cool sip of sunshine in every glass.',
-    img: 'images/menu-juice.webp',
-    orderMessage: "Hi! I'd like to order fresh juices from Irissh Treats."
+    desc: 'Bright mango & kiwi juice packed with ice and fresh fruit — a cool sip of sunshine.',
+    img: 'images/menu-tropical-juice.jpg',
+    orderMessage: "Hi! I'd like to order Tropical Fruit Juice from Irissh Treats."
+  },
+  {
+    name: 'Mixed Berry Juice',
+    category: 'drinks',
+    desc: 'A vibrant blend of berries pressed fresh — rich, fruity, and perfectly chilled.',
+    img: 'images/menu-mixed-berry-juice.jpg',
+    orderMessage: "Hi! I'd like to order Mixed Berry Juice from Irissh Treats."
+  },
+  {
+    name: 'Signature Berry Juice',
+    category: 'drinks',
+    desc: 'Our signature cold-pressed berry juice — bold colour, natural sweetness, ready to sip.',
+    img: 'images/menu-berry-juice.jpg',
+    orderMessage: "Hi! I'd like to order Signature Berry Juice from Irissh Treats."
   },
   {
     name: 'Egyptian Laban',
@@ -968,7 +978,7 @@ function updateInfo() {
   if (!p) return;
   productName.textContent = p.name;
   productDesc.textContent = p.desc;
-  if (orderNowBtn) orderNowBtn.href = whatsappLink(p.orderMessage);
+  if (orderNowBtn) orderNowBtn.href = whatsappLink(ORDER_MESSAGE);
 }
 
 function setActive(index) {

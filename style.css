@@ -1862,8 +1862,10 @@ h4 {
    CUSTOM CAKE / TIMELINE
    ============================================================ */
 .custom-cake {
-  background: var(--dark);
-  padding: var(--section-pad) 24px;
+  background:
+    linear-gradient(180deg, rgba(15, 7, 22, 0.72) 0%, rgba(15, 7, 22, 0.58) 45%, rgba(15, 7, 22, 0.78) 100%),
+    url('images/custom-cake-bg.webp') center / cover no-repeat;
+  padding: clamp(48px, 6vw, 72px) 24px;
   color: var(--white);
   position: relative;
   overflow: hidden;
@@ -1873,91 +1875,19 @@ h4 {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 20%, rgba(139, 66, 173, 0.25) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 50% 40%, rgba(139, 66, 173, 0.18) 0%, transparent 55%);
   pointer-events: none;
 }
 
-.timeline {
-  --step-icon-size: 68px;
-  --timeline-pad-top: 12px;
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  padding-top: var(--timeline-pad-top);
-}
-
-.timeline-line {
-  position: absolute;
-  /* Vertically centered through the icons only — never through titles/copy */
-  top: calc(var(--timeline-pad-top) + (var(--step-icon-size) / 2) - 1px);
-  left: 10%;
-  right: 10%;
-  height: 2px;
-  background: rgba(234, 219, 250, .14);
-  z-index: 0;
-  pointer-events: none;
-}
-
-.timeline-line-fill {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, var(--primary), var(--lavender));
-  transition: width 1.4s var(--ease);
-}
-
-.timeline-step {
-  text-align: center;
+.custom-cake .section-head {
+  margin-bottom: 28px;
   position: relative;
   z-index: 1;
 }
 
-.step-icon {
-  width: var(--step-icon-size);
-  height: var(--step-icon-size);
-  margin: 0 auto 20px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  /* Solid fill so the connector line sits behind icons, not through them */
-  background: #160b1f;
-  border: 1.5px solid rgba(234, 219, 250, .22);
-  color: var(--lavender);
-  transition: background .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease), transform .4s var(--ease), box-shadow .4s var(--ease);
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 0 0 10px var(--dark);
-}
-
-.timeline-step:hover .step-icon {
-  background: var(--primary);
-  color: var(--white);
-  border-color: transparent;
-  transform: scale(1.08);
-  box-shadow: 0 0 0 10px var(--dark), 0 0 24px rgba(139, 66, 173, 0.45);
-}
-
-.timeline-step h3 {
-  font-size: 0.92rem;
-  margin-bottom: 8px;
-  position: relative;
-  z-index: 2;
-}
-
-.timeline-step p {
-  color: rgba(255, 255, 255, .6);
-  font-size: .78rem;
-  max-width: 190px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-}
-
 .custom-cake-cta {
   text-align: center;
-  margin-top: 64px;
+  margin-top: 0;
   position: relative;
   z-index: 1;
 }
@@ -2319,15 +2249,6 @@ h4 {
     top: 2%;
   }
 
-  .timeline {
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 40px;
-  }
-
-  .timeline-line {
-    display: none;
-  }
-
   .contact-card {
     grid-template-columns: 1fr;
   }
@@ -2576,11 +2497,6 @@ h4 {
   .btn-yellow-pill {
     padding: 14px 32px;
     font-size: 0.76rem;
-  }
-
-  .timeline {
-    grid-template-columns: 1fr;
-    max-width: 360px;
   }
 
   /* Menu carousel — mobile coverflow */
