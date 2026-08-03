@@ -1113,8 +1113,12 @@ h4 {
   bottom: 30px;
   right: clamp(20px, 4vw, 48px);
   z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+.hero-social-btn,
 .hero-insta-btn {
   width: 44px;
   height: 44px;
@@ -1129,6 +1133,7 @@ h4 {
   transition: all 0.35s var(--ease);
 }
 
+.hero-social-btn:hover,
 .hero-insta-btn:hover {
   background: rgba(139, 66, 173, 0.35);
   color: var(--lavender);
