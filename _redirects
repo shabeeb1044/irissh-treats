@@ -1,2 +1,4 @@
-# Serve custom 404 on Netlify / similar static hosts
-/*    /404.html  404
+# Cloudflare Workers: custom 404 is handled in wrangler.jsonc
+# via assets.not_found_handling = "404-page" (serves /404.html).
+# Do not use "404" status codes here — Workers only allows
+# 200, 301, 302, 303, 307, 308.
