@@ -1,0 +1,18 @@
+# Cloudflare Workers uploads everything under assets.directory.
+# Exclude repo/tooling so .git pack files (and other junk) are not deployed.
+.git/
+.wrangler/
+node_modules/
+.github/
+*.md
+.gitignore
+.assetsignore
+wrangler.jsonc
+wrangler.toml
+package.json
+package-lock.json
+tools/
+images.zip
+_preview_continental/
+SEO_REPORT.md
+SEO_EXECUTIVE_GUIDE.md

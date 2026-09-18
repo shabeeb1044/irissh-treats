@@ -1,6 +1,11 @@
 # Dependencies
 node_modules/
 
+# Cloudflare Wrangler local state
+.wrangler/
+.dev.vars
+
+
 # Archives / local working copies (not needed on the live site)
 images.zip
 _preview_continental/
