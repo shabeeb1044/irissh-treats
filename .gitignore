@@ -9,6 +9,7 @@ node_modules/
 # Archives / local working copies (not needed on the live site)
 images.zip
 _preview_continental/
+_unused_images/
 
 # Local / editor noise
 .DS_Store
@@ -26,26 +27,5 @@ tools/
 SEO_REPORT.md
 SEO_EXECUTIVE_GUIDE.md
 
-# --- Unused / old images (site no longer references these) ---
-# Keep files on disk if you want; GitHub will ignore them.
-
-# Old flat menu images (replaced by images/menu/...)
-images/menu-*.jpg
-images/menu-*.webp
-images/sig-*.webp
-
-# Old hero round plates (replaced by images/hero-menu-...)
-images/hero-round-*
-images/irissh-burger-round.webp
-images/irissh-cake-round.webp
-images/irissh-juice-round.webp
-
-# Unused favicon drafts / duplicates
-images/favicon-old-tall.png
-images/favicon-square.png
-images/favicon-512x512.png
-images/favicon.ico
-images/favicon.png
-
-# Extra menu file not used on the site
-images/menu/continental/veg-momos.jpg
+# Old unused images live in _unused_images/ (local only — never push).
+# Keep images/favicon-512x512.png in images/ — site.webmanifest uses it.
