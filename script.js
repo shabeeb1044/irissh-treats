@@ -52,6 +52,7 @@ function whatsappLink(message) {
 const navbar = document.getElementById('navbar');
 
 function onScrollNav() {
+  if (!navbar) return;
   navbar.classList.toggle('scrolled', window.scrollY > 40);
 }
 onScrollNav();
@@ -121,220 +122,94 @@ const heroBgs = [
 
 const heroProducts = [
   {
-    name: 'Celebration Cake',
-    eyebrow: 'Custom Cakes',
+    name: 'Kunafa Pistachio',
+    eyebrow: 'Cheese Cakes',
     tagline: 'Pure Delights, Baked with Love.',
-    blurb: 'Custom celebration cakes crafted fresh for birthdays, weddings & every sweet moment.',
-    img: 'images/irissh-cake-round.webp',
+    blurb: 'Cheese cake with crispy kunafa & pistachio — crafted fresh for every celebration.',
+    img: 'images/hero-menu-kunafa-pistachio.jpg',
     bg: 'images/irissh-hero-bg.webp',
-    orderMessage: "Hi! I'd like to order a celebration cake from Irissh Treats."
+    orderMessage: "Hi! I'd like to order Kunafa Pistachio cake from Irissh Treats."
   },
   {
-    name: 'Birthday Bloom Cake',
-    eyebrow: 'Custom Cakes',
-    tagline: 'Make Their Day Extra Sweet.',
-    blurb: 'Pink ombre birthday cake with chocolate drips, fresh berries & a Happy Birthday plaque.',
-    img: 'images/hero-round-cake-birthday.jpg',
-    bg: 'images/irissh-hero-bg.webp',
-    orderMessage: "Hi! I'd like to order a Birthday Bloom cake from Irissh Treats."
-  },
-  {
-    name: 'Chocolate Gold Cake',
-    eyebrow: 'Custom Cakes',
-    tagline: 'Rich. Elegant. Irresistible.',
-    blurb: 'Dark chocolate ganache cake finished with berries, gold leaf & toasted hazelnuts.',
-    img: 'images/hero-round-cake-chocolate-gold.jpg',
+    name: 'Belgium Chocolate',
+    eyebrow: 'Chocolate Cakes',
+    tagline: 'Rich. Smooth. Irresistible.',
+    blurb: 'Deep Belgium chocolate layers finished for birthdays, parties & sweet moments.',
+    img: 'images/hero-menu-belgium-chocolate.jpg',
     bg: 'images/hero-bg.webp',
-    orderMessage: "Hi! I'd like to order a Chocolate Gold cake from Irissh Treats."
+    orderMessage: "Hi! I'd like to order Belgium Chocolate cake from Irissh Treats."
   },
   {
-    name: 'Red Velvet Rose',
-    eyebrow: 'Custom Cakes',
+    name: 'Red Velvet',
+    eyebrow: 'Cheese Cakes',
     tagline: 'Classic. Romantic. Unforgettable.',
-    blurb: 'Velvety red layers with cream cheese frosting, fresh roses & raspberry accents.',
-    img: 'images/hero-round-cake-red-velvet.jpg',
+    blurb: 'Velvety red cheese cake — a timeless favourite for celebrations.',
+    img: 'images/hero-menu-red-velvet.jpg',
     bg: 'images/hero-bg-new.webp',
-    orderMessage: "Hi! I'd like to order a Red Velvet Rose cake from Irissh Treats."
+    orderMessage: "Hi! I'd like to order Red Velvet cake from Irissh Treats."
   },
   {
-    name: 'Floral Wedding Cake',
-    eyebrow: 'Custom Cakes',
-    tagline: 'Ivory Elegance for Your Day.',
-    blurb: 'Smooth ivory buttercream with cascading white roses — crafted for weddings & celebrations.',
-    img: 'images/hero-round-cake-floral-wedding.jpg',
-    bg: 'images/irissh-hero-bg.webp',
-    orderMessage: "Hi! I'd like to order a Floral Wedding cake from Irissh Treats."
-  },
-  {
-    name: 'Butterscotch Crunch Cake',
-    eyebrow: 'Custom Cakes',
+    name: 'Lotus Bite',
+    eyebrow: 'Vanilla Cakes',
     tagline: 'Caramel. Crunch. Comfort.',
-    blurb: 'Golden butterscotch cake with caramel drips, toffee bits & whipped cream peaks.',
-    img: 'images/hero-round-cake-butterscotch.jpg',
+    blurb: 'Soft vanilla cake with lotus biscuit crunch — sweet, golden and comforting.',
+    img: 'images/hero-menu-lotus-bite.jpg',
     bg: 'images/hero_bakery_bg.webp',
-    orderMessage: "Hi! I'd like to order a Butterscotch Crunch cake from Irissh Treats."
+    orderMessage: "Hi! I'd like to order Lotus Bite cake from Irissh Treats."
   },
   {
-    name: 'Gourmet Burger',
-    eyebrow: 'Savory Bites',
-    tagline: 'Fresh. Stacked. Satisfying.',
-    blurb: 'Juicy gourmet burgers made to order — perfect for lunch, dinner, or a quick craving.',
-    img: 'images/irissh-burger-round.webp',
-    bg: 'images/hero_bakery_bg.webp',
-    orderMessage: "Hi! I'd like to order a gourmet burger from Irissh Treats."
+    name: 'Pistachio Louah',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Creamy. Nutty. Dreamy.',
+    blurb: 'Pistachio Nutella Louah — rich cream cup with golden crunch and pistachio finish.',
+    img: 'images/hero-menu-louah.jpg',
+    bg: 'images/irissh-hero-bg.webp',
+    orderMessage: "Hi! I'd like to order Pistachio Nutella Louah from Irissh Treats."
   },
   {
-    name: 'Tropical Fruit Juice',
-    eyebrow: 'Chilled Juices',
-    tagline: 'Squeezed Fresh. Served Cold.',
-    blurb: 'Bright mango & kiwi juice packed with ice and fresh fruit — a cool sip of sunshine.',
-    img: 'images/hero-round-tropical-juice.jpg',
+    name: 'Pistachio Salankatiya',
+    eyebrow: 'Signature Desserts',
+    tagline: 'Layered. Luxurious. Fresh.',
+    blurb: 'Vibrant pistachio salankatiya cup — smooth cream, nutty crunch, pure indulgence.',
+    img: 'images/hero-menu-salankatiya.jpg',
+    bg: 'images/hero-bg.webp',
+    orderMessage: "Hi! I'd like to order Pistachio Salankatiya from Irissh Treats."
+  },
+  {
+    name: 'Zinger Burger',
+    eyebrow: 'Continental',
+    tagline: 'Crispy. Stacked. Satisfying.',
+    blurb: 'Golden fried chicken burger with cheese, fresh veggies & house sauce — served hot.',
+    img: 'images/hero-menu-chicken-burger.jpg',
+    bg: 'images/hero_bakery_bg.webp',
+    orderMessage: "Hi! I'd like to order Zinger Burger from Irissh Treats."
+  },
+  {
+    name: 'Classic Mojito',
+    eyebrow: 'Continental',
+    tagline: 'Cool. Fresh. Zesty.',
+    blurb: 'Icy mint-lime mojito — a bright, refreshing sip with every craving.',
+    img: 'images/hero-menu-mojito.jpg',
     bg: 'images/hero_bg_restaurant.webp',
-    orderMessage: "Hi! I'd like to order Tropical Fruit Juice from Irissh Treats."
+    orderMessage: "Hi! I'd like to order Classic Mojito from Irissh Treats."
   },
   {
-    name: 'Mixed Berry Juice',
-    eyebrow: 'Chilled Juices',
-    tagline: 'Berry Bold. Ice Cold.',
-    blurb: 'A vibrant blend of berries pressed fresh — rich, fruity, and perfectly chilled.',
-    img: 'images/irissh-juice-round.webp',
+    name: 'Royal Falooda',
+    eyebrow: 'Continental',
+    tagline: 'Layered. Chilled. Royal.',
+    blurb: 'Tall falooda with ice cream, nuts, jelly & rose syrup — a cool classic treat.',
+    img: 'images/hero-menu-falooda.jpg',
+    bg: 'images/irissh-hero-bg.webp',
+    orderMessage: "Hi! I'd like to order Royal Falooda from Irissh Treats."
+  },
+  {
+    name: 'Loaded Milkshakes',
+    eyebrow: 'Continental',
+    tagline: 'Thick. Topped. Indulgent.',
+    blurb: 'Freakshake-style loaded milkshakes piled high with cream, syrup & crunch.',
+    img: 'images/hero-menu-milkshakes.jpg',
     bg: 'images/hero-bg-new.webp',
-    orderMessage: "Hi! I'd like to order Mixed Berry Juice from Irissh Treats."
-  },
-  {
-    name: 'Signature Berry Juice',
-    eyebrow: 'Chilled Juices',
-    tagline: 'Bottled Fresh. Pure Flavour.',
-    blurb: 'Our signature cold-pressed berry juice — bold colour, natural sweetness, ready to sip.',
-    img: 'images/hero-round-berry-juice.jpg',
-    bg: 'images/hero_bg_restaurant.webp',
-    orderMessage: "Hi! I'd like to order Signature Berry Juice from Irissh Treats."
-  },
-  {
-    name: 'Gourmet Sandwich',
-    eyebrow: 'Fresh Sandwiches',
-    tagline: 'Crisp. Loaded. Delicious.',
-    blurb: 'Freshly made sandwiches stacked with flavour — grab one on the go.',
-    img: 'images/hero-round-sandwich.webp',
-    bg: 'images/hero_bakery_bg.webp',
-    orderMessage: "Hi! I'd like to order a gourmet sandwich from Irissh Treats."
-  },
-  {
-    name: 'Egyptian Laban',
-    eyebrow: 'Signature Desserts',
-    tagline: 'Creamy. Cool. Unforgettable.',
-    blurb: 'Egyptian laban dessert — silky milk pudding finished with pistachio, rose & honey.',
-    img: 'images/hero-round-laban.webp',
-    bg: 'images/irissh-hero-bg.webp',
-    orderMessage: "Hi! I'd like to order Egyptian laban dessert from Irissh Treats."
-  },
-  {
-    name: 'Bambooza',
-    eyebrow: 'Signature Desserts',
-    tagline: 'Vanilla. Caramel. Crunch.',
-    blurb: 'Creamy vanilla ice cream with caramel drizzle, biscuit crunch & golden crispy toppings.',
-    img: 'images/hero-round-bambooza.jpg',
-    bg: 'images/irissh-hero-bg.webp',
-    orderMessage: "Hi! I'd like to order Bambooza from Irissh Treats."
-  },
-  {
-    name: 'Loua',
-    eyebrow: 'Signature Desserts',
-    tagline: 'Kunafa. Cream. Fresh Berry.',
-    blurb: 'Rich creamy dessert topped with crispy kunafa, toasted almonds, chocolate & a fresh strawberry.',
-    img: 'images/hero-round-loua.jpg',
-    bg: 'images/hero-bg.webp',
-    orderMessage: "Hi! I'd like to order Loua from Irissh Treats."
-  },
-  {
-    name: 'Salankatia',
-    eyebrow: 'Signature Desserts',
-    tagline: 'Chocolate Meets Pistachio.',
-    blurb: 'Smooth chocolate on one side, vibrant pistachio cream on the other — finished with crushed nuts & sesame.',
-    img: 'images/hero-round-salankatia.jpg',
-    bg: 'images/hero-bg-new.webp',
-    orderMessage: "Hi! I'd like to order Salankatia from Irissh Treats."
-  },
-  {
-    name: 'Ruh Hayathi',
-    eyebrow: 'Signature Desserts',
-    tagline: 'Luxurious. Layered. Unforgettable.',
-    blurb: 'Glossy chocolate & pistachio drizzle with crunchy nuts, flakes, sprinkles & a bright cherry on top.',
-    img: 'images/hero-round-ruh-hayathi.jpg',
-    bg: 'images/irissh-hero-bg.webp',
-    orderMessage: "Hi! I'd like to order Ruh Hayathi from Irissh Treats."
-  },
-  {
-    name: 'Ashta Dream',
-    eyebrow: 'Signature Desserts',
-    tagline: 'Cream. Pistachio. Rose.',
-    blurb: 'Thick ashta cream with crushed pistachios, rose petals, honey drizzle & golden pastry flakes.',
-    img: 'images/hero-round-ashta-dream.jpg',
-    bg: 'images/hero-bg.webp',
-    orderMessage: "Hi! I'd like to order Ashta Dream from Irissh Treats."
-  },
-  {
-    name: 'Om Ali',
-    eyebrow: 'Signature Desserts',
-    tagline: 'Warm. Nutty. Comforting.',
-    blurb: 'Creamy pastry layers with toasted nuts, raisins & coconut — a classic Egyptian favourite.',
-    img: 'images/hero-round-om-ali.jpg',
-    bg: 'images/hero-bg-new.webp',
-    orderMessage: "Hi! I'd like to order Om Ali from Irissh Treats."
-  },
-  {
-    name: 'Lotus Crunch',
-    eyebrow: 'Signature Desserts',
-    tagline: 'Caramel. Biscuit. Bliss.',
-    blurb: 'Silky lotus biscuit cream with caramelised crunch, whipped cream & chocolate chips.',
-    img: 'images/hero-round-lotus-crunch.jpg',
-    bg: 'images/irissh-hero-bg.webp',
-    orderMessage: "Hi! I'd like to order Lotus Crunch from Irissh Treats."
-  },
-  {
-    name: 'Kunafa Royale',
-    eyebrow: 'Signature Desserts',
-    tagline: 'Crispy. Creamy. Royal.',
-    blurb: 'Golden crispy kunafa with creamy filling, pistachio dust, syrup glaze & toasted almonds.',
-    img: 'images/hero-round-kunafa-royale.jpg',
-    bg: 'images/hero_bakery_bg.webp',
-    orderMessage: "Hi! I'd like to order Kunafa Royale from Irissh Treats."
-  },
-  {
-    name: 'Mango Cheesecake',
-    eyebrow: 'Signature Desserts',
-    tagline: 'Tropical. Creamy. Fresh.',
-    blurb: 'Creamy mango cheesecake cup with mango puree, fresh mango cubes & biscuit crunch.',
-    img: 'images/hero-round-mango-cheesecake.jpg',
-    bg: 'images/irissh-hero-bg.webp',
-    orderMessage: "Hi! I'd like to order Mango Cheesecake from Irissh Treats."
-  },
-  {
-    name: 'Chocolate Mousse',
-    eyebrow: 'Signature Desserts',
-    tagline: 'Dark. Silky. Indulgent.',
-    blurb: 'Silky chocolate mousse cup with glossy chocolate sauce, shavings & a fresh raspberry.',
-    img: 'images/hero-round-chocolate-mousse.jpg',
-    bg: 'images/hero-bg.webp',
-    orderMessage: "Hi! I'd like to order Chocolate Mousse from Irissh Treats."
-  },
-  {
-    name: 'Strawberry Cheesecake',
-    eyebrow: 'Signature Desserts',
-    tagline: 'Berry. Cream. Bliss.',
-    blurb: 'Strawberry cheesecake cup with pink berry sauce, fresh strawberries & biscuit crumble.',
-    img: 'images/hero-round-strawberry-cheesecake.jpg',
-    bg: 'images/hero-bg-new.webp',
-    orderMessage: "Hi! I'd like to order Strawberry Cheesecake from Irissh Treats."
-  },
-  {
-    name: 'Pistachio Paradise',
-    eyebrow: 'Signature Desserts',
-    tagline: 'Nutty. Creamy. Dreamy.',
-    blurb: 'Vibrant pistachio cream cup with crushed pistachios, soft cream & a touch of honey.',
-    img: 'images/hero-round-pistachio-paradise.jpg',
-    bg: 'images/hero_bakery_bg.webp',
-    orderMessage: "Hi! I'd like to order Pistachio Paradise from Irissh Treats."
+    orderMessage: "Hi! I'd like to order a Loaded Milkshake from Irissh Treats."
   }
 ];
 
@@ -443,15 +318,15 @@ function applyHeroContent(center, left, right, total) {
 
   if (imgPlateCenter) {
     imgPlateCenter.src = center.img;
-    imgPlateCenter.alt = center.name;
+    imgPlateCenter.alt = center.name + ' at Irissh Treats in Shoranur';
   }
   if (imgPlateLeft) {
     imgPlateLeft.src = left.img;
-    imgPlateLeft.alt = left.name;
+    imgPlateLeft.alt = left.name + ' at Irissh Treats in Shoranur';
   }
   if (imgPlateRight) {
     imgPlateRight.src = right.img;
-    imgPlateRight.alt = right.name;
+    imgPlateRight.alt = right.name + ' at Irissh Treats in Shoranur';
   }
 
   if (labelCenter) labelCenter.textContent = center.name;
@@ -461,7 +336,7 @@ function applyHeroContent(center, left, right, total) {
   if (heroEyebrow) heroEyebrow.textContent = center.eyebrow;
   if (heroTitle) heroTitle.textContent = center.tagline;
   if (heroSubtext) heroSubtext.textContent = center.blurb;
-  if (heroCtaBtn) heroCtaBtn.href = whatsappLink(ORDER_MESSAGE);
+  if (heroCtaBtn) heroCtaBtn.href = whatsappLink(center.orderMessage || ORDER_MESSAGE);
 
   const accentRing = document.querySelector('.yellow-accent-ring circle');
   if (accentRing) {
@@ -632,18 +507,20 @@ if (heroSection && heroStageEl && !prefersReducedMotion) {
   }, { passive: true });
 }
 
-updateHeroDish(0, 0);
-resetHeroAutoplay();
+if (heroSection) {
+  updateHeroDish(0, 0);
+  resetHeroAutoplay();
 
-/* Preload hero assets */
-[...new Set([
-  ...heroBgs,
-  ...heroProducts.map((p) => p.img),
-  ...heroProducts.map((p) => p.bg).filter(Boolean)
-])].forEach((src) => {
-  const img = new Image();
-  img.src = src;
-});
+  /* Preload hero assets */
+  [...new Set([
+    ...heroBgs,
+    ...heroProducts.map((p) => p.img),
+    ...heroProducts.map((p) => p.bg).filter(Boolean)
+  ])].forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+}
 
 /* ---------------------------------------------------------
    5. INTERSECTION OBSERVER — Scroll reveals
@@ -662,185 +539,583 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealTargets.forEach(el => revealObserver.observe(el));
 
 /* ---------------------------------------------------------
-   6. PRODUCT CAROUSEL — Menu Highlights
+   6. MENU GRID — Products from tools/products.json
 --------------------------------------------------------- */
 const products = [
   {
-    name: 'Celebration Cakes',
-    category: 'cakes',
-    desc: 'Custom celebration cakes and signature slices — crafted with love for every occasion.',
-    img: 'images/menu-cake.webp',
-    orderMessage: "Hi! I'd like to order cakes from Irissh Treats."
+    "name": "Blueberry Cheese Cake",
+    "category": "cakes",
+    "desc": "Creamy cheese cake finished with a glossy blueberry topping — soft, fruity and celebration-ready.",
+    "img": "images/menu/cakes/cheese-blueberry.jpg",
+    "orderMessage": "Hi! I'd like to order Blueberry Cheese Cake from Irissh Treats.",
+    "price": "₹140"
   },
   {
-    name: 'Birthday Bloom Cake',
-    category: 'cakes',
-    desc: 'Pink ombre birthday cake with chocolate drips, fresh berries & a Happy Birthday plaque.',
-    img: 'images/menu-cake-birthday.jpg',
-    orderMessage: "Hi! I'd like to order a Birthday Bloom cake from Irissh Treats."
+    "name": "Crunchy Kinder Cheese Cake",
+    "category": "cakes",
+    "desc": "Rich cheese cake loaded with Kinder crunch and chocolate — a favourite for birthdays.",
+    "img": "images/menu/cakes/cheese-crunchy-kinder.jpg",
+    "orderMessage": "Hi! I'd like to order Crunchy Kinder Cheese Cake from Irissh Treats.",
+    "price": "₹140"
   },
   {
-    name: 'Chocolate Gold Cake',
-    category: 'cakes',
-    desc: 'Dark chocolate ganache cake finished with berries, edible gold leaf & toasted hazelnuts.',
-    img: 'images/menu-cake-chocolate-gold.jpg',
-    orderMessage: "Hi! I'd like to order a Chocolate Gold cake from Irissh Treats."
+    "name": "Kunafa Pistachio Cheese Cake",
+    "category": "cakes",
+    "desc": "Cheese cake layered with crispy kunafa and pistachio — our signature celebration cake.",
+    "img": "images/menu/cakes/cheese-kunafa-pistachio.jpg",
+    "orderMessage": "Hi! I'd like to order Kunafa Pistachio Cheese Cake from Irissh Treats.",
+    "price": "₹140"
   },
   {
-    name: 'Red Velvet Rose',
-    category: 'cakes',
-    desc: 'Classic red velvet with cream cheese frosting, fresh roses & raspberry accents.',
-    img: 'images/menu-cake-red-velvet.jpg',
-    orderMessage: "Hi! I'd like to order a Red Velvet Rose cake from Irissh Treats."
+    "name": "Lotus Cheese Cake",
+    "category": "cakes",
+    "desc": "Silky cheese cake with Lotus biscuit cream and caramel notes in every bite.",
+    "img": "images/menu/cakes/cheese-lotus-cheese.jpg",
+    "orderMessage": "Hi! I'd like to order Lotus Cheese Cake from Irissh Treats.",
+    "price": "₹140"
   },
   {
-    name: 'Floral Wedding Cake',
-    category: 'cakes',
-    desc: 'Ivory buttercream elegance with cascading white roses — perfect for weddings & celebrations.',
-    img: 'images/menu-cake-floral-wedding.jpg',
-    orderMessage: "Hi! I'd like to order a Floral Wedding cake from Irissh Treats."
+    "name": "Oreo Cheese Cake",
+    "category": "cakes",
+    "desc": "Cookies-and-cream cheese cake topped with Oreo crunch — classic and indulgent.",
+    "img": "images/menu/cakes/cheese-oreo.jpg",
+    "orderMessage": "Hi! I'd like to order Oreo Cheese Cake from Irissh Treats.",
+    "price": "₹140"
   },
   {
-    name: 'Butterscotch Crunch Cake',
-    category: 'cakes',
-    desc: 'Golden butterscotch cake with caramel drips, toffee bits & whipped cream peaks.',
-    img: 'images/menu-cake-butterscotch.jpg',
-    orderMessage: "Hi! I'd like to order a Butterscotch Crunch cake from Irissh Treats."
+    "name": "Red Velvet Cheese Cake",
+    "category": "cakes",
+    "desc": "Soft red velvet cheese cake with a smooth finish — timeless for any celebration.",
+    "img": "images/menu/cakes/cheese-red-velvet.jpg",
+    "orderMessage": "Hi! I'd like to order Red Velvet Cheese Cake from Irissh Treats.",
+    "price": "₹900"
   },
   {
-    name: 'Gourmet Burgers',
-    category: 'burgers-sandwiches',
-    desc: 'Juicy, freshly made burgers stacked high — perfect for lunch or a satisfying snack.',
-    img: 'images/menu-burger.webp',
-    orderMessage: "Hi! I'd like to order burgers from Irissh Treats."
+    "name": "Belgium Chocolate Cake",
+    "category": "cakes",
+    "desc": "Deep Belgium chocolate layers for true chocolate lovers — rich and smooth.",
+    "img": "images/menu/cakes/chocolate-belgium-chocolate.jpg",
+    "orderMessage": "Hi! I'd like to order Belgium Chocolate Cake from Irissh Treats.",
+    "price": "₹1200"
   },
   {
-    name: 'Fresh Sandwiches',
-    category: 'burgers-sandwiches',
-    desc: 'Crisp, loaded sandwiches made fresh — grab one on the go or settle in for a bite.',
-    img: 'images/menu-sandwich.webp',
-    orderMessage: "Hi! I'd like to order sandwiches from Irissh Treats."
+    "name": "Black Forest Cake",
+    "category": "cakes",
+    "desc": "Chocolate sponge with cherry and cream — the evergreen classic.",
+    "img": "images/menu/cakes/chocolate-black-forest.jpg",
+    "orderMessage": "Hi! I'd like to order Black Forest Cake from Irissh Treats.",
+    "price": "₹700"
   },
   {
-    name: 'Tropical Fruit Juice',
-    category: 'drinks',
-    desc: 'Bright mango & kiwi juice packed with ice and fresh fruit — a cool sip of sunshine.',
-    img: 'images/menu-tropical-juice.jpg',
-    orderMessage: "Hi! I'd like to order Tropical Fruit Juice from Irissh Treats."
+    "name": "Choco Truffle Cake",
+    "category": "cakes",
+    "desc": "Dense chocolate truffle cake with a smooth ganache finish.",
+    "img": "images/menu/cakes/chocolate-choco-truffle.jpg",
+    "orderMessage": "Hi! I'd like to order Choco Truffle Cake from Irissh Treats.",
+    "price": "₹1000"
   },
   {
-    name: 'Mixed Berry Juice',
-    category: 'drinks',
-    desc: 'A vibrant blend of berries pressed fresh — rich, fruity, and perfectly chilled.',
-    img: 'images/menu-mixed-berry-juice.jpg',
-    orderMessage: "Hi! I'd like to order Mixed Berry Juice from Irissh Treats."
+    "name": "Milky Nut Cake",
+    "category": "cakes",
+    "desc": "Milk chocolate cake topped with roasted nuts and creamy layers.",
+    "img": "images/menu/cakes/chocolate-milky-nut.jpg",
+    "orderMessage": "Hi! I'd like to order Milky Nut Cake from Irissh Treats.",
+    "price": "₹1200"
   },
   {
-    name: 'Signature Berry Juice',
-    category: 'drinks',
-    desc: 'Our signature cold-pressed berry juice — bold colour, natural sweetness, ready to sip.',
-    img: 'images/menu-berry-juice.jpg',
-    orderMessage: "Hi! I'd like to order Signature Berry Juice from Irissh Treats."
+    "name": "Snickers Cake",
+    "category": "cakes",
+    "desc": "Chocolate, peanut and caramel Snickers-inspired cake — bold and satisfying.",
+    "img": "images/menu/cakes/chocolate-snickers.jpg",
+    "orderMessage": "Hi! I'd like to order Snickers Cake from Irissh Treats.",
+    "price": "₹1200"
   },
   {
-    name: 'Egyptian Laban',
-    category: 'desserts',
-    desc: 'Silky Egyptian laban dessert — cool milk pudding topped with pistachio, rose & honey.',
-    img: 'images/menu-laban.webp',
-    orderMessage: "Hi! I'd like to order Egyptian laban dessert from Irissh Treats."
+    "name": "Pistachio Nutella Cake",
+    "category": "cakes",
+    "desc": "Pistachio meets Nutella in a rich dual-flavour celebration cake.",
+    "img": "images/menu/cakes/mixed-flavour-pistachio-nutella.jpg",
+    "orderMessage": "Hi! I'd like to order Pistachio Nutella Cake from Irissh Treats.",
+    "price": "₹1200"
   },
   {
-    name: 'Bambooza',
-    category: 'desserts',
-    desc: 'Creamy vanilla ice cream with caramel drizzle, crunchy biscuit pieces, chocolate flakes & golden toppings.',
-    img: 'images/menu-bambooza.jpg',
-    orderMessage: "Hi! I'd like to order Bambooza from Irissh Treats."
+    "name": "Red Bee Cake",
+    "category": "cakes",
+    "desc": "Bold mixed-flavour cake with a bright signature finish.",
+    "img": "images/menu/cakes/mixed-flavour-red-bee.jpg",
+    "orderMessage": "Hi! I'd like to order Red Bee Cake from Irissh Treats.",
+    "price": "₹1000"
   },
   {
-    name: 'Loua',
-    category: 'desserts',
-    desc: 'Rich creamy dessert topped with crispy kunafa, toasted almond flakes, chocolate pieces & a fresh strawberry.',
-    img: 'images/menu-loua.jpg',
-    orderMessage: "Hi! I'd like to order Loua from Irissh Treats."
+    "name": "Vancho Cake",
+    "category": "cakes",
+    "desc": "Half vanilla, half chocolate — the perfect shareable classic.",
+    "img": "images/menu/cakes/mixed-flavour-vancho.jpg",
+    "orderMessage": "Hi! I'd like to order Vancho Cake from Irissh Treats.",
+    "price": "₹1000"
   },
   {
-    name: 'Salankatia',
-    category: 'desserts',
-    desc: 'Smooth chocolate cream meets vibrant pistachio — topped with crushed pistachios & sesame seeds.',
-    img: 'images/menu-salankatia.jpg',
-    orderMessage: "Hi! I'd like to order Salankatia from Irissh Treats."
+    "name": "Blueberry Vanilla Cake",
+    "category": "cakes",
+    "desc": "Soft vanilla cake finished with blueberry topping — light and fruity.",
+    "img": "images/menu/cakes/vanilla-blue-berry.jpg",
+    "orderMessage": "Hi! I'd like to order Blueberry Vanilla Cake from Irissh Treats.",
+    "price": "₹900"
   },
   {
-    name: 'Ruh Hayathi',
-    category: 'desserts',
-    desc: 'Glossy chocolate sauce, pistachio drizzle, crunchy nuts, chocolate flakes, white sprinkles & a cherry on top.',
-    img: 'images/menu-ruh-hayathi.jpg',
-    orderMessage: "Hi! I'd like to order Ruh Hayathi from Irissh Treats."
+    "name": "Butterscotch Cake",
+    "category": "cakes",
+    "desc": "Golden butterscotch cake with caramel crunch — warm and comforting.",
+    "img": "images/menu/cakes/vanilla-butterscotch.jpg",
+    "orderMessage": "Hi! I'd like to order Butterscotch Cake from Irissh Treats.",
+    "price": "₹1000"
   },
   {
-    name: 'Ashta Dream',
-    category: 'desserts',
-    desc: 'Thick ashta cream with crushed pistachios, rose petals, honey drizzle & golden pastry flakes.',
-    img: 'images/menu-ashta-dream.jpg',
-    orderMessage: "Hi! I'd like to order Ashta Dream from Irissh Treats."
+    "name": "Classic Vanilla Cake",
+    "category": "cakes",
+    "desc": "Soft classic vanilla sponge — clean, light and always in demand.",
+    "img": "images/menu/cakes/vanilla-classic-vanilla-1.jpg",
+    "orderMessage": "Hi! I'd like to order Classic Vanilla Cake from Irissh Treats.",
+    "price": "₹1000"
   },
   {
-    name: 'Om Ali',
-    category: 'desserts',
-    desc: 'Creamy pastry layers with toasted nuts, raisins & coconut — a classic Egyptian favourite.',
-    img: 'images/menu-om-ali.jpg',
-    orderMessage: "Hi! I'd like to order Om Ali from Irissh Treats."
+    "name": "Fresh Fruit Cake",
+    "category": "cakes",
+    "desc": "Vanilla cake topped with a medley of fresh seasonal fruits.",
+    "img": "images/menu/cakes/vanilla-fresh-fruit.jpg",
+    "orderMessage": "Hi! I'd like to order Fresh Fruit Cake from Irissh Treats.",
+    "price": "₹1500"
   },
   {
-    name: 'Lotus Crunch',
-    category: 'desserts',
-    desc: 'Silky lotus biscuit cream with caramelised crunch, whipped cream & chocolate chips.',
-    img: 'images/menu-lotus-crunch.jpg',
-    orderMessage: "Hi! I'd like to order Lotus Crunch from Irissh Treats."
+    "name": "Honey Almond Cake",
+    "category": "cakes",
+    "desc": "Honey-kissed vanilla cake finished with toasted almonds.",
+    "img": "images/menu/cakes/vanilla-honey-almond.jpg",
+    "orderMessage": "Hi! I'd like to order Honey Almond Cake from Irissh Treats.",
+    "price": "₹1000"
   },
   {
-    name: 'Kunafa Royale',
-    category: 'desserts',
-    desc: 'Golden crispy kunafa with creamy filling, pistachio dust, syrup glaze & toasted almonds.',
-    img: 'images/menu-kunafa-royale.jpg',
-    orderMessage: "Hi! I'd like to order Kunafa Royale from Irissh Treats."
+    "name": "Lotus Bite Cake",
+    "category": "cakes",
+    "desc": "Vanilla cake with Lotus biscuit crunch and caramel sweetness.",
+    "img": "images/menu/cakes/vanilla-lotus-bite.jpg",
+    "orderMessage": "Hi! I'd like to order Lotus Bite Cake from Irissh Treats.",
+    "price": "₹1200"
   },
   {
-    name: 'Mango Cheesecake',
-    category: 'desserts',
-    desc: 'Creamy mango cheesecake cup with mango puree, fresh mango cubes & biscuit crunch.',
-    img: 'images/menu-mango-cheesecake.jpg',
-    orderMessage: "Hi! I'd like to order Mango Cheesecake from Irissh Treats."
+    "name": "Mango Classic Cake",
+    "category": "cakes",
+    "desc": "Tropical mango vanilla cake — bright, fruity and fresh.",
+    "img": "images/menu/cakes/vanilla-mango-classic.jpg",
+    "orderMessage": "Hi! I'd like to order Mango Classic Cake from Irissh Treats.",
+    "price": "₹900"
   },
   {
-    name: 'Chocolate Mousse',
-    category: 'desserts',
-    desc: 'Silky chocolate mousse cup with glossy chocolate sauce, shavings & a fresh raspberry.',
-    img: 'images/menu-chocolate-mousse.jpg',
-    orderMessage: "Hi! I'd like to order Chocolate Mousse from Irissh Treats."
+    "name": "Strawberry Cake",
+    "category": "cakes",
+    "desc": "Soft vanilla cake with strawberry cream finish.",
+    "img": "images/menu/cakes/vanilla-strawberry.jpg",
+    "orderMessage": "Hi! I'd like to order Strawberry Cake from Irissh Treats.",
+    "price": "₹900"
   },
   {
-    name: 'Strawberry Cheesecake',
-    category: 'desserts',
-    desc: 'Strawberry cheesecake cup with pink berry sauce, fresh strawberries & biscuit crumble.',
-    img: 'images/menu-strawberry-cheesecake.jpg',
-    orderMessage: "Hi! I'd like to order Strawberry Cheesecake from Irissh Treats."
+    "name": "White Forest Cake",
+    "category": "cakes",
+    "desc": "White chocolate and cherry white forest — elegant and light.",
+    "img": "images/menu/cakes/vanilla-white-forest.jpg",
+    "orderMessage": "Hi! I'd like to order White Forest Cake from Irissh Treats.",
+    "price": "₹700"
   },
   {
-    name: 'Pistachio Paradise',
-    category: 'desserts',
-    desc: 'Vibrant pistachio cream cup with crushed pistachios, soft cream & a touch of honey.',
-    img: 'images/menu-pistachio-paradise.jpg',
-    orderMessage: "Hi! I'd like to order Pistachio Paradise from Irissh Treats."
+    "name": "Chocolate Hebba Cake",
+    "category": "desserts",
+    "desc": "Soft chocolate Hebba cake cup — rich, moist and perfect for a quick treat.",
+    "img": "images/menu/desserts/hebba-cake-chocolate-hebba-cake.jpg",
+    "orderMessage": "Hi! I'd like to order Chocolate Hebba Cake from Irissh Treats.",
+    "price": "₹360"
+  },
+  {
+    "name": "Pista Hebba Cake",
+    "category": "desserts",
+    "desc": "Pistachio Hebba cake cup with a nutty cream finish.",
+    "img": "images/menu/desserts/hebba-cake-pista-hebba-cake.jpg",
+    "orderMessage": "Hi! I'd like to order Pista Hebba Cake from Irissh Treats.",
+    "price": "₹360"
+  },
+  {
+    "name": "Belgium Chocolate Koshari",
+    "category": "desserts",
+    "desc": "Belgium chocolate Koshari dessert cup with layered richness.",
+    "img": "images/menu/desserts/koshari-belgium-chocolate-koshari.jpg",
+    "orderMessage": "Hi! I'd like to order Belgium Chocolate Koshari from Irissh Treats.",
+    "price": "₹360"
+  },
+  {
+    "name": "Kinder Koshari",
+    "category": "desserts",
+    "desc": "Kinder-loaded Koshari cup — creamy, crunchy and chocolatey.",
+    "img": "images/menu/desserts/koshari-kinder-koshari.jpg",
+    "orderMessage": "Hi! I'd like to order Kinder Koshari from Irissh Treats.",
+    "price": "₹360"
+  },
+  {
+    "name": "Chocolate Kinder Louah",
+    "category": "desserts",
+    "desc": "Chocolate Louah cup topped with Kinder crunch.",
+    "img": "images/menu/desserts/louah-chocolate-kinder-louah.jpg",
+    "orderMessage": "Hi! I'd like to order Chocolate Kinder Louah from Irissh Treats.",
+    "price": "₹340"
+  },
+  {
+    "name": "Kinder Nutella Louah",
+    "category": "desserts",
+    "desc": "Louah cup blended with Kinder and Nutella cream.",
+    "img": "images/menu/desserts/louah-kinder-nutella-louah.jpg",
+    "orderMessage": "Hi! I'd like to order Kinder Nutella Louah from Irissh Treats.",
+    "price": "₹350"
+  },
+  {
+    "name": "Nutella Pistachio Kinder Louah",
+    "category": "desserts",
+    "desc": "Triple-hit Louah — Nutella, pistachio and Kinder in every spoon.",
+    "img": "images/menu/desserts/louah-nutella-pistachio-kinder-louah.jpg",
+    "orderMessage": "Hi! I'd like to order Nutella Pistachio Kinder Louah from Irissh Treats.",
+    "price": "₹340"
+  },
+  {
+    "name": "Pistachio Lotus Louah",
+    "category": "desserts",
+    "desc": "Pistachio Louah with Lotus biscuit crunch.",
+    "img": "images/menu/desserts/louah-pistachio-lotus-louah.jpg",
+    "orderMessage": "Hi! I'd like to order Pistachio Lotus Louah from Irissh Treats.",
+    "price": "₹350"
+  },
+  {
+    "name": "Pistachio Nutella Louah",
+    "category": "desserts",
+    "desc": "Signature pistachio and Nutella Louah — creamy and indulgent.",
+    "img": "images/menu/desserts/louah-pistachio-nutella-louah.jpg",
+    "orderMessage": "Hi! I'd like to order Pistachio Nutella Louah from Irissh Treats.",
+    "price": "₹350"
+  },
+  {
+    "name": "Trio Louah",
+    "category": "desserts",
+    "desc": "Three-flavour Louah cup for those who want it all.",
+    "img": "images/menu/desserts/louah-trio-louah.jpg",
+    "orderMessage": "Hi! I'd like to order Trio Louah from Irissh Treats.",
+    "price": "₹350"
+  },
+  {
+    "name": "Lotus Salankatiya",
+    "category": "desserts",
+    "desc": "Lotus biscuit Salankatiya with caramel cream layers.",
+    "img": "images/menu/desserts/salankatiya-lotus-salankatiya.jpg",
+    "orderMessage": "Hi! I'd like to order Lotus Salankatiya from Irissh Treats.",
+    "price": "₹350"
+  },
+  {
+    "name": "Nutella Lotus Salankatiya",
+    "category": "desserts",
+    "desc": "Nutella and Lotus Salankatiya — sweet caramel-chocolate bliss.",
+    "img": "images/menu/desserts/salankatiya-nutella-lotus-salankatiya.jpg",
+    "orderMessage": "Hi! I'd like to order Nutella Lotus Salankatiya from Irissh Treats.",
+    "price": "₹350"
+  },
+  {
+    "name": "Nutella Salankatiya",
+    "category": "desserts",
+    "desc": "Classic Nutella Salankatiya cup with rich chocolate cream.",
+    "img": "images/menu/desserts/salankatiya-nutella-salankatiya.jpg",
+    "orderMessage": "Hi! I'd like to order Nutella Salankatiya from Irissh Treats.",
+    "price": "₹350"
+  },
+  {
+    "name": "Pistachio Lotus Salankatiya",
+    "category": "desserts",
+    "desc": "Pistachio cream meets Lotus crunch in a layered cup.",
+    "img": "images/menu/desserts/salankatiya-pistachio-lotus-salankatiya.jpg",
+    "orderMessage": "Hi! I'd like to order Pistachio Lotus Salankatiya from Irissh Treats.",
+    "price": "₹350"
+  },
+  {
+    "name": "Pistachio Nutella Salankatiya",
+    "category": "desserts",
+    "desc": "Pistachio and Nutella Salankatiya — a dual-flavour favourite.",
+    "img": "images/menu/desserts/salankatiya-pistachio-nutella-salankatiya.jpg",
+    "orderMessage": "Hi! I'd like to order Pistachio Nutella Salankatiya from Irissh Treats.",
+    "price": "₹340"
+  },
+  {
+    "name": "Pistachio Salankatiya",
+    "category": "desserts",
+    "desc": "Vibrant pistachio Salankatiya with crushed nut finish.",
+    "img": "images/menu/desserts/salankatiya-pistachio-salankatiya.jpg",
+    "orderMessage": "Hi! I'd like to order Pistachio Salankatiya from Irissh Treats.",
+    "price": "₹350"
+  },
+  {
+    "name": "Trio Salankatiya",
+    "category": "desserts",
+    "desc": "Trio-flavour Salankatiya cup — layered, rich and shareable.",
+    "img": "images/menu/desserts/salankatiya-trio-salankatiya.jpg",
+    "orderMessage": "Hi! I'd like to order Trio Salankatiya from Irissh Treats.",
+    "price": "₹350"
+  },
+  {
+    "name": "Dynamite Wings",
+    "category": "starters",
+    "desc": "Spicy glazed hot wings served with dipping sauce — bold heat in every bite.",
+    "price": "₹220",
+    "img": "images/menu/continental/glazed-chicken-wings.jpg",
+    "orderMessage": "Hi! I'd like to order Dynamite Wings from Irissh Treats."
+  },
+  {
+    "name": "Fried BBQ Wings",
+    "category": "starters",
+    "desc": "Crispy fried BBQ wings with a sticky glaze and side dip.",
+    "price": "₹220",
+    "img": "images/menu/continental/fried-bbq-wings.jpg",
+    "orderMessage": "Hi! I'd like to order Fried BBQ Wings from Irissh Treats."
+  },
+  {
+    "name": "Normal Fries",
+    "category": "starters",
+    "desc": "Classic golden crispy fries — perfect as a side or snack.",
+    "price": "₹110",
+    "img": "images/menu/continental/normal-fries.jpg",
+    "orderMessage": "Hi! I'd like to order Normal Fries from Irissh Treats."
+  },
+  {
+    "name": "Creamy Fries",
+    "category": "starters",
+    "desc": "Crispy fries tossed in a creamy house sauce.",
+    "price": "₹140",
+    "img": "images/menu/continental/creamy-fries.jpg",
+    "orderMessage": "Hi! I'd like to order Creamy Fries from Irissh Treats."
+  },
+  {
+    "name": "Chicken Loaded Fries",
+    "category": "starters",
+    "desc": "Loaded fries topped with chicken bites, sauces and fresh garnish.",
+    "price": "₹230",
+    "img": "images/menu/continental/loaded-chicken-fries.jpg",
+    "orderMessage": "Hi! I'd like to order Chicken Loaded Fries from Irissh Treats."
+  },
+  {
+    "name": "Zinger Loaded Fries",
+    "category": "starters",
+    "desc": "Loaded fries with crispy zinger chicken and signature sauces.",
+    "price": "₹230",
+    "img": "images/menu/continental/zinger-loaded-fries.jpg",
+    "orderMessage": "Hi! I'd like to order Zinger Loaded Fries from Irissh Treats."
+  },
+  {
+    "name": "Cheese Chicken Loaded Fries",
+    "category": "starters",
+    "desc": "Loaded fries with chicken, melted cheese sauce and toppings.",
+    "price": "₹240",
+    "img": "images/menu/continental/cheese-chicken-loaded-fries.jpg",
+    "orderMessage": "Hi! I'd like to order Cheese Chicken Loaded Fries from Irissh Treats."
+  },
+  {
+    "name": "Zinger Burger",
+    "category": "burgers-wraps",
+    "desc": "Crispy zinger-style chicken burger with fresh veggies and house sauce. Served with fries.",
+    "price": "₹170",
+    "img": "images/menu/continental/crispy-chicken-burger.jpg",
+    "orderMessage": "Hi! I'd like to order Zinger Burger from Irissh Treats."
+  },
+  {
+    "name": "Cheese Burger",
+    "category": "burgers-wraps",
+    "desc": "Juicy cheese burger stacked with melted cheese, lettuce and tomato. Served with fries.",
+    "price": "₹220",
+    "img": "images/menu/continental/cheese-burger.jpg",
+    "orderMessage": "Hi! I'd like to order Cheese Burger from Irissh Treats."
+  },
+  {
+    "name": "Dynamite Burger",
+    "category": "burgers-wraps",
+    "desc": "Spicy dynamite chicken burger with a fiery kick — served hot with fries.",
+    "price": "₹190",
+    "img": "images/menu/continental/dynamite-burger.jpg",
+    "orderMessage": "Hi! I'd like to order Dynamite Burger from Irissh Treats."
+  },
+  {
+    "name": "Zinger Wrap",
+    "category": "burgers-wraps",
+    "desc": "Crispy zinger wrap packed with chicken, veggies and sauces. Served with fries.",
+    "price": "₹170",
+    "img": "images/menu/continental/crispy-chicken-wrap.jpg",
+    "orderMessage": "Hi! I'd like to order Zinger Wrap from Irissh Treats."
+  },
+  {
+    "name": "Fried Chicken Shawarma",
+    "category": "burgers-wraps",
+    "desc": "Fried chicken shawarma wrap with fresh fillings and house sauces.",
+    "price": "₹140",
+    "img": "images/menu/continental/fried-chicken-shawarma.jpg",
+    "orderMessage": "Hi! I'd like to order Fried Chicken Shawarma from Irissh Treats."
+  },
+  {
+    "name": "Zinger Cheese Wrap",
+    "category": "burgers-wraps",
+    "desc": "Zinger wrap loaded with cheese, chicken and veggies. Served with fries.",
+    "price": "₹180",
+    "img": "images/menu/continental/zinger-cheese-wrap.jpg",
+    "orderMessage": "Hi! I'd like to order Zinger Cheese Wrap from Irissh Treats."
+  },
+  {
+    "name": "Vegetable Club",
+    "category": "sandwiches",
+    "desc": "Triple-layer vegetable club sandwich with fresh veggies and sauces. Served with fries.",
+    "price": "₹160",
+    "img": "images/menu/continental/vegetable-club.jpg",
+    "orderMessage": "Hi! I'd like to order Vegetable Club from Irissh Treats."
+  },
+  {
+    "name": "Chicken Club",
+    "category": "sandwiches",
+    "desc": "Classic chicken club sandwich with crispy chicken, lettuce and tomato. Fries on the side.",
+    "price": "₹180",
+    "img": "images/menu/continental/chicken-club-sandwich.jpg",
+    "orderMessage": "Hi! I'd like to order Chicken Club from Irissh Treats."
+  },
+  {
+    "name": "Mix Club",
+    "category": "sandwiches",
+    "desc": "Mixed club sandwich stacked with chicken and veggies — a hearty café favourite.",
+    "price": "₹190",
+    "img": "images/menu/continental/mix-club.jpg",
+    "orderMessage": "Hi! I'd like to order Mix Club from Irissh Treats."
+  },
+  {
+    "name": "Steam Momo",
+    "category": "momos",
+    "desc": "Soft steamed momos served with dipping sauce.",
+    "price": "₹110",
+    "img": "images/menu/continental/steam-momo.jpg",
+    "orderMessage": "Hi! I'd like to order Steam Momo from Irissh Treats."
+  },
+  {
+    "name": "Fried Momo",
+    "category": "momos",
+    "desc": "Crispy fried momos with dipping sauce on the side.",
+    "price": "₹110",
+    "img": "images/menu/continental/fried-momo.jpg",
+    "orderMessage": "Hi! I'd like to order Fried Momo from Irissh Treats."
+  },
+  {
+    "name": "Schezwan Momo",
+    "category": "momos",
+    "desc": "Momos tossed in spicy Schezwan sauce — bold and flavourful.",
+    "price": "₹140",
+    "img": "images/menu/continental/schezwan-momo.jpg",
+    "orderMessage": "Hi! I'd like to order Schezwan Momo from Irissh Treats."
+  },
+  {
+    "name": "Dynamite Momo",
+    "category": "momos",
+    "desc": "Dynamite-style spicy momos with a fiery house finish.",
+    "price": "₹150",
+    "img": "images/menu/continental/dynamite-momo.jpg",
+    "orderMessage": "Hi! I'd like to order Dynamite Momo from Irissh Treats."
+  },
+  {
+    "name": "Combo 499",
+    "category": "combos",
+    "desc": "2 energy drinks, club sandwich, 2 burgers and fries — great for sharing.",
+    "price": "₹499",
+    "img": "images/Combo_499.png",
+    "orderMessage": "Hi! I'd like to order Combo 499 from Irissh Treats."
+  },
+  {
+    "name": "Combo 799",
+    "category": "combos",
+    "desc": "Loaded feast combo with drinks, club sandwich, burgers and fries.",
+    "price": "₹799",
+    "img": "images/Combo_799.png",
+    "orderMessage": "Hi! I'd like to order Combo 799 from Irissh Treats."
+  },
+  {
+    "name": "Loaded Milkshakes",
+    "category": "milkshakes",
+    "desc": "Thick freakshake-style milkshakes — strawberry, chocolate Oreo and caramel banana.",
+    "price": "₹169",
+    "img": "images/menu/continental/loaded-milkshakes.jpg",
+    "orderMessage": "Hi! I'd like to order Loaded Milkshakes from Irissh Treats."
+  },
+  {
+    "name": "Ice Cream Sundaes",
+    "category": "milkshakes",
+    "desc": "Scoops piled with chocolate, Oreo, strawberry brownie, fudge and candy toppings.",
+    "price": "₹179",
+    "img": "images/menu/continental/ice-cream-sundaes.jpg",
+    "orderMessage": "Hi! I'd like to order Ice Cream Sundaes from Irissh Treats."
+  },
+  {
+    "name": "Classic Mojito",
+    "category": "mojitos",
+    "desc": "Icy mint-lime mojito with fresh mint, lime wedges and crushed ice.",
+    "price": "₹129",
+    "img": "images/menu/continental/classic-mojito.jpg",
+    "orderMessage": "Hi! I'd like to order Classic Mojito from Irissh Treats."
+  },
+  {
+    "name": "Royal Falooda",
+    "category": "falooda",
+    "desc": "Tall layered falooda with ice cream, nuts, jelly, sabja and rose syrup.",
+    "price": "₹179",
+    "img": "images/menu/continental/royal-falooda.jpg",
+    "orderMessage": "Hi! I'd like to order Royal Falooda from Irissh Treats."
   }
 ];
-
 const menuCategories = [
-  { id: 'all', label: 'All' },
-  { id: 'cakes', label: 'Cakes' },
-  { id: 'burgers-sandwiches', label: 'Burgers & Sandwiches' },
-  { id: 'drinks', label: 'Drinks' },
-  { id: 'desserts', label: 'Desserts' }
+  {
+    "id": "all",
+    "label": "All"
+  },
+  {
+    "id": "starters",
+    "label": "Starters"
+  },
+  {
+    "id": "burgers-wraps",
+    "label": "Burgers & Wraps"
+  },
+  {
+    "id": "sandwiches",
+    "label": "Sandwiches"
+  },
+  {
+    "id": "momos",
+    "label": "Momos"
+  },
+  {
+    "id": "combos",
+    "label": "Combos"
+  },
+  {
+    "id": "desserts",
+    "label": "Desserts"
+  },
+  {
+    "id": "milkshakes",
+    "label": "Milkshakes"
+  },
+  {
+    "id": "mojitos",
+    "label": "Mojitos"
+  },
+  {
+    "id": "falooda",
+    "label": "Falooda"
+  },
+  {
+    "id": "cakes",
+    "label": "Cakes"
+  }
 ];
 
 const track = document.getElementById('carouselTrack');
@@ -848,6 +1123,7 @@ const dotsWrap = document.getElementById('carouselDots');
 const filtersWrap = document.getElementById('menuFilters');
 const productName = document.getElementById('productName');
 const productDesc = document.getElementById('productDesc');
+const productPrice = document.getElementById('productPrice');
 const orderNowBtn = document.getElementById('orderNowBtn');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
@@ -865,7 +1141,6 @@ function getVisibleProducts() {
 function buildFilters() {
   if (!filtersWrap) return;
   filtersWrap.innerHTML = '';
-
   menuCategories.forEach((cat) => {
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -884,7 +1159,6 @@ function setCategory(categoryId) {
   if (activeCategory === categoryId) return;
   activeCategory = categoryId;
   visibleProducts = getVisibleProducts();
-
   if (filtersWrap) {
     filtersWrap.querySelectorAll('.menu-filter-tab').forEach((tab) => {
       const isActive = tab.dataset.category === activeCategory;
@@ -892,7 +1166,6 @@ function setCategory(categoryId) {
       tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
     });
   }
-
   buildCarousel();
   setActive(0);
   resetAutoplay();
@@ -906,9 +1179,9 @@ function buildCarousel() {
     const item = document.createElement('button');
     item.type = 'button';
     item.className = 'carousel-item';
-    item.dataset.index = i;
-    item.setAttribute('aria-label', `Show ${p.name}`);
-    item.innerHTML = `<img src="${p.img}" alt="${p.name}" loading="lazy"><span class="carousel-label">${p.name}</span>`;
+    item.dataset.index = String(i);
+    item.setAttribute('aria-label', 'Show ' + p.name);
+    item.innerHTML = '<img src="' + p.img + '" alt="' + p.name + '" loading="lazy" width="450" height="450"><span class="carousel-label">' + p.name + '</span>';
     item.addEventListener('click', () => { setActive(i); resetAutoplay(); });
     track.appendChild(item);
   });
@@ -918,7 +1191,7 @@ function buildCarousel() {
     const dot = document.createElement('button');
     dot.type = 'button';
     dot.className = 'dot';
-    dot.setAttribute('aria-label', `Show ${p.name}`);
+    dot.setAttribute('aria-label', 'Show ' + p.name);
     dot.addEventListener('click', () => { setActive(i); resetAutoplay(); });
     dotsWrap.appendChild(dot);
   });
@@ -942,9 +1215,6 @@ function renderCarouselPositions() {
     item.classList.remove('active', 'side-1', 'side-2', 'before', 'after', 'is-hidden');
     const diff = relativeDiff(i, len);
     let abs = Math.abs(diff);
-
-    // With an even item count the wrap-around item (diff === len/2) has no
-    // mirror on the other side; hide it so the active item stays centered.
     if (len % 2 === 0 && abs === len / 2) abs = Infinity;
 
     if (diff === 0) {
@@ -973,12 +1243,27 @@ function renderCarouselPositions() {
 }
 
 function updateInfo() {
-  if (!productName || !productDesc) return;
   const p = visibleProducts[activeIndex];
   if (!p) return;
-  productName.textContent = p.name;
-  productDesc.textContent = p.desc;
-  if (orderNowBtn) orderNowBtn.href = whatsappLink(ORDER_MESSAGE);
+  if (productName) {
+    productName.textContent = p.name;
+    productName.style.animation = 'none';
+    void productName.offsetWidth;
+    productName.style.animation = '';
+  }
+  if (productDesc) {
+    productDesc.textContent = p.desc || '';
+    productDesc.style.animation = 'none';
+    void productDesc.offsetWidth;
+    productDesc.style.animation = '';
+  }
+  if (productPrice) {
+    productPrice.textContent = p.price || '';
+    productPrice.style.animation = 'none';
+    void productPrice.offsetWidth;
+    productPrice.style.animation = '';
+  }
+  if (orderNowBtn) orderNowBtn.href = whatsappLink(p.orderMessage || ORDER_MESSAGE);
 }
 
 function setActive(index) {
@@ -1033,6 +1318,13 @@ buildFilters();
 buildCarousel();
 setActive(0);
 resetAutoplay();
+
+document.querySelectorAll('[data-menu-category]').forEach((link) => {
+  link.addEventListener('click', () => {
+    const cat = link.getAttribute('data-menu-category');
+    if (cat) setCategory(cat);
+  });
+});
 
 /* ---------------------------------------------------------
    7. FOOTER YEAR

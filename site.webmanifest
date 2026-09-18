@@ -1,0 +1,23 @@
+{
+  "name": "Irissh Treats",
+  "short_name": "Irissh Treats",
+  "description": "Handcrafted cakes, gourmet sweets and café favourites in Shoranur.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#8E30A6",
+  "icons": [
+    {
+      "src": "images/favicon-192x192.png?v=3",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/favicon-512x512.png?v=3",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
